@@ -2,7 +2,9 @@
 
 import { AboutSection } from "@/components/AboutSection";
 import { Clientele } from "@/components/Clientele";
+import { ContactSection } from "@/components/ContactSection";
 import { Cta } from "@/components/Cta";
+import { FooterSection } from "@/components/FooterSection";
 import HeroSection from "@/components/HeroSection";
 import { ServiceSection } from "@/components/SeriviceSection";
 import { Team } from "@/components/TeamSection";
@@ -33,6 +35,7 @@ const HomePage = () => {
             }} />
             <Team />
             {/* <Clientele /> */}
+            <ContactSection />
         </div>
     )
 }

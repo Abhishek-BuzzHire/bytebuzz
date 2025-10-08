@@ -13,8 +13,8 @@ interface Team {
 const team = members
 
 const Team = ({
-  heading = "Team",
-  description = "Our diverse team of experts brings together decades of experience in design, engineering, and product development.",
+  heading = "Our Core Team",
+  description = "Our diverse team of experts brings together decades of experience in development, engineering, and database administration.",
   members = team
 }: Team) => {
   return (

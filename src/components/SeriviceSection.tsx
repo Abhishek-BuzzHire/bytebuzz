@@ -1,7 +1,6 @@
 "use client";
 
 import { serviceSec } from "@/data/data";
-import { Code, Cog, PenTool, Shrub } from "lucide-react";
 
 const services = serviceSec;
 
@@ -12,7 +11,7 @@ const ServiceSection = () => {
         <div className="mx-auto max-w-6xl space-y-12">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Services
+              Our Core IT Servcies
             </h2>
             <p className="text-muted-foreground mx-auto max-w-2xl text-lg tracking-tight md:text-xl">
               We craft digital experiences that captivate and convert, bringing
@@ -21,7 +20,7 @@ const ServiceSection = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-             {serviceSec.map((service, index) => {
+             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div

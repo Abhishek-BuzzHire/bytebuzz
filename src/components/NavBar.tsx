@@ -13,44 +13,9 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { serviceSec } from "@/data/data"
 
-const services: { title: string; href: string; description: string }[] = [
-    {
-        title: "Service 1",
-        href: "/docs/primitives/alert-dialog",
-        description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
-    },
-    {
-        title: "Service 2",
-        href: "/docs/primitives/hover-card",
-        description:
-            "For sighted users to preview content available behind a link.",
-    },
-    {
-        title: "Service 3",
-        href: "/docs/primitives/progress",
-        description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-    },
-    {
-        title: "Service 4",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
-    },
-    {
-        title: "Service 5",
-        href: "/docs/primitives/tabs",
-        description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-        title: "Service 6",
-        href: "/docs/primitives/tooltip",
-        description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-    },
-]
+const services = serviceSec
 
 const careers: { title: string; href: string; description: string }[] = [
     {
@@ -90,13 +55,13 @@ export function NavBar() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                            <NavigationMenuContent className="translate-x-[-40%]">
-                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                            <NavigationMenuContent className=" relative z-50 translate-x-[-40%]">
+                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                                     {services.map((service) => (
                                         <ListItem
                                             key={service.title}
                                             title={service.title}
-                                            href={service.href}
+                                            href={`/services/${service.slug}`}
                                         >
                                             {service.description}
                                         </ListItem>
@@ -116,7 +81,7 @@ export function NavBar() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Careers</NavigationMenuTrigger>
-                            <NavigationMenuContent className="translate-x-[-60%]">
+                            <NavigationMenuContent className="relative z-50 translate-x-[-60%]">
                                 <ul className=" grid w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[500px]">
                                     {careers.map((career) => (
                                         <ListItem
