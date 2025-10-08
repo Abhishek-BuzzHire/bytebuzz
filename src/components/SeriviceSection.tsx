@@ -18,32 +18,32 @@ const ServiceSection = () => {
               your vision to life.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-             {services.map((service, index) => {
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
+            {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div
-                  key={index}
-                  className="border-border space-y-6 rounded-lg border p-8 transition-shadow hover:shadow-sm"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-muted rounded-full p-3">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="space-y-2">
-                    {service.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="flex items-center gap-2">
-                        <div className="bg-foreground h-1.5 w-1.5 rounded-full" />
-                        <span className="text-sm font-medium">{item}</span>
+                <div key={index}>
+                  <a href={`/services/${service.slug}`} target="_blank">
+                    <div className="border-border space-y-6 rounded-lg border p-8 transition-shadow hover:shadow-sm">
+                      <div className="flex items-center gap-4">
+                        <div className="bg-muted rounded-full p-3">
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <h3 className="text-xl font-semibold">{service.title}</h3>
                       </div>
-                    ))}
-                  </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="space-y-2">
+                        {service.items.map((item, itemIndex) => (
+                          <div key={itemIndex} className="flex items-center gap-2">
+                            <div className="bg-foreground h-1.5 w-1.5 rounded-full" />
+                            <span className="text-sm font-medium">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    </a>
                 </div>
               );
             })}

@@ -1,3 +1,4 @@
+import { serviceSec } from "@/data/data";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -25,16 +26,9 @@ interface Footer7Props {
     }>;
 }
 
+const services = serviceSec;
+
 const defaultSections = [
-    // {
-    //     title: "Product",
-    //     links: [
-    //         { name: "Overview", href: "#" },
-    //         { name: "Pricing", href: "#" },
-    //         { name: "Marketplace", href: "#" },
-    //         { name: "Features", href: "#" },
-    //     ],
-    // },
     {
         title: "Company",
         links: [
@@ -42,17 +36,6 @@ const defaultSections = [
             { name: "Team", href: "#" },
             { name: "Careers", href: "#" },
             { name: "Contact", href: "#" },
-        ],
-    },
-    {
-        title: "Services",
-        links: [
-            { name: "Database", href: "#" },
-            { name: "Software Development", href: "#" },
-            { name: "Data Engineering", href: "#" },
-            { name: "Cloud & DevOps", href: "#" },
-            { name: "CyberSecurity", href: "#" },
-            { name: "IT Infrastructure Setup & Support", href: "#" },
         ],
     },
 ];
@@ -128,6 +111,19 @@ const FooterSection = ({
                                 </ul>
                             </div>
                         ))}
+                        <div>
+                            <h3 className="mb-4 font-bold">Serives</h3>
+                            <ul className="text-muted-foreground space-y-3 text-sm">
+                        {services.map((link, index)=> (
+                            <li
+                                            key={index}
+                                            className="hover:text-primary font-medium"
+                                        >
+                                            <a href={`/services/${link.slug}`}>{link.title}</a>
+                                        </li>
+                        ))}
+                        </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="text-muted-foreground mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium md:flex-row md:items-center md:text-left">
