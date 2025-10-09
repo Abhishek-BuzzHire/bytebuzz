@@ -25,8 +25,14 @@ const AboutSection = ({
 }: AboutSec) => {
     return (
         <section className="flex justify-center py-20">
-            <div className="container flex flex-col gap-16 lg:px-16">
+            <div className="relative container flex flex-col gap-16 lg:px-16">
+                <div className="absolute inset-0 -z-10 ">
+                    <div className="absolute top-0 left-[10%] size-[300px] rounded-full bg-fuchsia-500/30 blur-[120px]" />
+                    <div className="absolute top-[40%] right-[20%] size-[400px] rounded-full bg-blue-500/30 blur-[120px]" />
+                    <div className="absolute bottom-0 left-[30%] size-[250px] rounded-full bg-teal-400/30 blur-[120px]" />
+                </div>
                 <div className="lg:max-w-full">
+
                     <h2 className="mb-3 text-xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
                         {heading}
                     </h2>
@@ -41,7 +47,7 @@ const AboutSection = ({
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
                     {features[0] && (
-                        <div className="border-border flex flex-col overflow-clip rounded-xl border md:col-span-2 md:grid md:grid-cols-2 md:gap-6 lg:gap-8">
+                        <div className="flex flex-col overflow-clip rounded-xl md:col-span-2 md:grid md:grid-cols-2 md:gap-6 lg:gap-8">
                             <div className="md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[32rem]">
                                 <img
                                     src={features[0].image}
@@ -62,13 +68,13 @@ const AboutSection = ({
                     {features.slice(1).map((feature) => (
                         <div
                             key={feature.id}
-                            className="border-border flex flex-col overflow-clip rounded-xl border"
+                            className="flex flex-col overflow-clip rounded-xl"
                         >
                             <div>
                                 <img
                                     src={feature.image}
                                     alt={feature.title}
-                                    className="aspect-16/9 h-full w-full object-cover object-center"
+                                    className="aspect-16/9 h-full w-full object-cover object-top"
                                 />
                             </div>
                             <div className="px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">

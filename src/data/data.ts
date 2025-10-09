@@ -14,21 +14,21 @@ export const aboutData: about[] = [
     title: "Our Story",
     description:
       "Clean and intuitive interface built with the latest design principles. Optimized for the best user experience.",
-    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+    image: "story.jpg",
   },
   {
     id: "feature-2",
     title: "Mission",
     description:
       "Fully responsive design that works seamlessly across all devices and screen sizes. Perfect for any platform.",
-    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
+    image: "mission-org.jpg",
   },
   {
     id: "feature-3",
     title: "Vision",
     description:
       "Simple integration process with comprehensive documentation and dedicated support team.",
-    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
+    image: "vision.jpg",
   },
 ]
 
@@ -38,6 +38,7 @@ export interface ServiceSec {
   description: string;
   items: string[];
   slug: string;
+  image: string;
 }
 
 export const serviceSec: ServiceSec[] = [
@@ -47,7 +48,8 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Ensure the reliability, security, and optimum performance of databases that underpin all workflows",
     items: ["MySQL, PostgreSQL, DB2, SQL Server", "Monitoring, and Optimization", "Data Backup & Recovery Solutions"],
-    slug: "database-service"
+    slug: "database-service",
+    image: "database.jpg",
   },
   {
     icon: Code,
@@ -55,7 +57,9 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
     items: ["Web Application Development", "Custom ERP/CRM Solutions", "SaaS (Software as a Service)"],
-    slug: "software-development-service"
+    slug: "software-development-service",
+    image: "web-dev.jpg",
+
   },
   {
     icon: Braces,
@@ -63,7 +67,8 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Design, build, and maintain data pipelines, Ensure raw data is ingested, cleaned, transformed, stored, and delivered as actionable information.",
     items: [" Data Source Assessment", " Data Pipeline Design", "Data Modelling & Schema Design"],
-    slug: "data-engineering-service"
+    slug: "data-engineering-service",
+    image: "data-engineering.jpg",
   },
   {
     icon: Infinity,
@@ -71,7 +76,8 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
     items: ["Cloud Infrastructure Setup & Optimization", "Cloud Cost Management", " Hybrid and Multi-Cloud Strategy"],
-    slug: "cloud-devops-service"
+    slug: "cloud-devops-service",
+    image: "devops.jpg",
   },
   {
     icon: ShieldCheck,
@@ -79,7 +85,8 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
     items: ["Security solutions", "Compliance"],
-    slug: "cybersecurity-service"
+    slug: "cybersecurity-service",
+    image: "cybersecurity.jpg",
   },
   {
     icon: Router,
@@ -87,7 +94,8 @@ export const serviceSec: ServiceSec[] = [
     description:
       "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
     items: [" Network setup (LAN, WAN, Wi-Fi, VPN)", "Server installation and configuration", "IT helpdesk and technical support"],
-    slug: "it-setup-support-service"
+    slug: "it-setup-support-service",
+    image: "it-support.jpg",
   },
 ];
 
@@ -345,7 +353,7 @@ export const servicesData: Service[] = [
           },
         ],
       },
-      
+
     ]
   },
   {
@@ -458,7 +466,7 @@ export const servicesData: Service[] = [
             ]
           },
         ],
-      },      
+      },
     ]
   },
   {
@@ -598,7 +606,7 @@ export const servicesData: Service[] = [
           },
         ],
       },
-      
+
     ]
   },
   {
@@ -635,7 +643,7 @@ export const servicesData: Service[] = [
             ]
           },
         ],
-      },     
+      },
     ]
   },
   {
@@ -658,7 +666,7 @@ export const servicesData: Service[] = [
             ]
           },
         ],
-      }, 
+      },
     ]
   },
 ]
@@ -667,7 +675,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  avatar: string;
+  image: string;
   github?: string;
   twitter?: string;
   linkedin?: string;
@@ -678,7 +686,7 @@ export const members = [
     id: "member-1",
     name: "Sarah Chen",
     role: "CEO & Founder",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
+    image: "1.jpg",
     github: "#",
     twitter: "#",
     linkedin: "#",
@@ -687,7 +695,7 @@ export const members = [
     id: "member-2",
     name: "Marcus Rodriguez",
     role: "CTO",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
+    image: "2.jpg",
     github: "#",
     twitter: "#",
     linkedin: "#",
@@ -696,7 +704,7 @@ export const members = [
     id: "member-3",
     name: "Emily Watson",
     role: "Head of Design",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
+    image: "3.jpg",
     github: "#",
     twitter: "#",
     linkedin: "#",

@@ -11,7 +11,13 @@ const contact = contactdata;
 const ContactSection = () => {
   return (
     <section className="flex justify-center py-20">
-      <div className="container">
+      <div className="container relative">
+        <div className="absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
+          <div className="size-[800px] rounded-full border border-neutral-800/60 dark:border-neutral-200/20 [mask-image:radial-gradient(white,transparent)]" />
+          <div className="absolute inset-0 [background-image:radial-gradient(currentColor_1px,transparent_1px)] [background-size:30px_30px] text-neutral-300 dark:text-neutral-700/40" />
+        </div>
+
+
         <div className=" mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-2xl flex-col gap-10">
             <div className="text-center lg:text-left">
@@ -45,26 +51,26 @@ const ContactSection = () => {
 
             </div>
           </div>
-          <div className="mx-auto flex max-w-3xl flex-col gap-6 rounded-lg border p-10">
+          <div className="mx-auto bg-background flex max-w-3xl flex-col gap-6 rounded-lg border p-10">
             <div className="flex gap-4">
-              <div className="grid w-full items-center gap-1.5">
+              <div className="grid w-full items-center gap-4">
                 <Label htmlFor="firstname">Full Name</Label>
                 <Input type="text" id="fullname" placeholder="Full Name" />
               </div>
-              <div className="grid w-full items-center gap-1.5">
+              <div className="grid w-full items-center gap-4">
                 <Label htmlFor="lastname">Phone</Label>
                 <Input type="number" id="phone" placeholder="Phone" />
               </div>
             </div>
-            <div className="grid w-full items-center gap-1.5">
+            <div className="grid w-full items-center gap-4">
               <Label htmlFor="email">Email</Label>
               <Input type="email" id="email" placeholder="Email" />
             </div>
-            <div className="grid w-full items-center gap-1.5">
+            <div className="grid w-full items-center gap-4">
               <Label htmlFor="subject">Subject</Label>
               <Input type="text" id="subject" placeholder="Subject" />
             </div>
-            <div className="grid w-full gap-1.5">
+            <div className="grid w-full gap-4">
               <Label htmlFor="message">Message</Label>
               <Textarea placeholder="Type your message here." id="message" />
             </div>

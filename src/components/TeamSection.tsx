@@ -2,6 +2,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { members, TeamMember } from "@/data/data";
+import Image from "next/image";
 
 interface Team {
   heading?: string;
@@ -19,7 +20,7 @@ const Team = ({
 }: Team) => {
   return (
     <section className="py-24 lg:py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl">
             {heading}
@@ -32,48 +33,49 @@ const Team = ({
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {members.map((member) => (
             <div key={member.id} className="p-6">
-              <div className="flex bg-accent p-4 rounded-md flex-col items-center text-center">
-                <div className="mb-4">
-                  <Avatar className="size-20 lg:size-32">
-                    <AvatarImage src={member.avatar} />
-                    <AvatarFallback className="text-lg font-semibold">
-                      {member.name}
-                    </AvatarFallback>
-                  </Avatar>
-                </div>
+              <div className="group relative h-108 w-full overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"
 
-                <div className="mb-6">
-                  <h3 className="mb-1 text-lg font-semibold">{member.name}</h3>
-                  <p className="text-primary text-sm font-medium">
-                    {member.role}
-                  </p>
-                </div>
-
-                <div className="flex gap-3">
-                  {member.github && (
-                    <a
-                      href={member.github}
-                      className="bg-muted/50 rounded-lg p-2"
-                    >
-                      <Github className="text-muted-foreground size-4" />
-                    </a>
-                  )}
-                  {member.twitter && (
-                    <a
-                      href={member.twitter}
-                      className="bg-muted/50 rounded-lg p-2"
-                    >
-                      <Twitter className="text-muted-foreground size-4" />
-                    </a>
-                  )}
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      className="bg-muted/50 rounded-lg p-2"
-                    >
-                      <Linkedin className="text-muted-foreground size-4" />
-                    </a>
-                  )}
+                style={{
+                  backgroundImage: `url(/members/${member.image})`
+                }}>
+                <div className="absolute inset-x-0 bottom-0 z-0 h-2/5 bg-gradient-to-t from-black/100 to-transparent" />
+                <div className="relative z-10 flex h-full flex-col justify-end">
+                  <div className="flex justify-center transition-transform duration-500 bottom-0 group-hover:-translate-y-5">
+                    <div className="text-center">
+                      <h3 className="mb-1 text-3xl font-semibold text-white">{member.name}</h3>
+                      <p className="text-white text-lg font-light">
+                        {member.role}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="details-container space-y-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
+                    <div className="flex gap-3 justify-center">
+                      {member.github && (
+                        <a
+                          href={member.github}
+                          className="bg-primary rounded-lg p-2"
+                        >
+                          <Github className="text-white size-6" />
+                        </a>
+                      )}
+                      {member.twitter && (
+                        <a
+                          href={member.twitter}
+                          className="bg-primary rounded-lg p-2"
+                        >
+                          <Twitter className="text-white size-6" />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          className="bg-primary rounded-lg p-2"
+                        >
+                          <Linkedin className="text-white size-6" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -26,6 +26,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { serviceSec } from "@/data/data";
+import { ThemeToggle } from "./ThemeToggle";
 
 const careers: { title: string; href: string; description: string }[] = [
     {
@@ -52,15 +53,15 @@ const NavBar = () => {
     const services = serviceSec;
 
     return (
-        <section className=" flex justify-center p-4">
-            <div className="container">
+        <section className="sticky top-0 z-50 bg-background flex justify-center">
+            <div className="container p-4">
                 <nav className="flex items-center justify-between">
                     <a
                         href="/"
                         className="flex items-center gap-2"
                     >
                         <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
+                            src="/logo.png"
                             className="max-h-8"
                             alt="ByteBuzz.in"
                         />
@@ -76,7 +77,7 @@ const NavBar = () => {
                                     <div className="grid w-[600px] grid-cols-2 p-3">
                                         {services.map((service, index) => (
                                             <NavigationMenuLink
-                                                href={`services/${service.slug}`}
+                                                href={`/services/${service.slug}`}
                                                 key={index}
                                                 className="rounded-md p-3 transition-colors hover:bg-muted/70"
                                             >
@@ -136,6 +137,7 @@ const NavBar = () => {
                     </NavigationMenu>
                     <div className="hidden items-center gap-4 lg:flex">
                         {/* <Button variant="outline">Contact</Button> */}
+                        <ThemeToggle />
                         <Button>Contact</Button>
                     </div>
                     <Sheet>

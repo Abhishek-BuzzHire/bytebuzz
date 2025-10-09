@@ -11,7 +11,7 @@ import { Team } from "@/components/TeamSection";
 
 const HomePage = () => {
     return (
-        <div className="px-4">
+        <div className="lg:px-0 sm:px-4">
             <HeroSection heading={"SaaS Services For Your Needs"} description={"We make businesses go big through our tech services that optimizes and enhances your business activities everyday."} button={{
                 text: "Explore More",
                 icon: undefined,

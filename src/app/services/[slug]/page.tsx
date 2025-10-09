@@ -22,7 +22,7 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
                 className="relative flex min-h-[500px] items-center justify-center bg-cover bg-center bg-no-repeat py-32"
                 style={{
                     backgroundImage:
-                        `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.image})`,
+                        `url(${service.image})`,
                 }}
             >
                 {/* Dark overlay for better text readability */}
@@ -38,7 +38,7 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
             {/* Intro Section */}
             <div className="py-16">
                 <div className="px-16 mb-12">
-                    <p className="text-muted-foreground text-xl leading-relaxed">
+                    <p className="text-foreground text-xl leading-relaxed">
                         {service.description}
                     </p>
                 </div>
@@ -78,29 +78,43 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 gap-4 px-8 md:grid-cols-5">
+            <div className="flex flex-nowrap overflow-x-auto gap-8 px-8">
                 {bottomServices.map((service, index) => {
                     const Icon = service.icon;
                     return (
                         <div key={index}>
                             <a href={`/services/${service.slug}`}>
-                                <div className="border-border space-y-6 rounded-lg border p-8 transition-shadow hover:shadow-sm">
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-muted rounded-full p-3">
-                                            <Icon className="h-6 w-6" />
-                                        </div>
-                                        <h3 className="text-xl font-semibold">{service.title}</h3>
-                                    </div>
-                                    <p className="text-muted-foreground leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                    <div className="space-y-2">
-                                        {service.items.map((item, itemIndex) => (
-                                            <div key={itemIndex} className="flex items-center gap-2">
-                                                <div className="bg-foreground h-1.5 w-1.5 rounded-full" />
-                                                <span className="text-sm font-medium">{item}</span>
+                                <div
+                                    className="group relative h-108 w-125 overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"
+
+                                    style={{
+                                        backgroundImage: `url(/low-res/${service.image})`
+                                    }}
+                                >
+                                    <div className="absolute inset-0 z-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/70" />
+                                    <div className="absolute inset-0 z-0  bg-gradient-to-t from-transparent to-black/60 max-h-3/5" />
+                                    <div className="relative z-10 flex h-full flex-col justify-between space-y-4 pt-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="bg-muted/70 rounded-full p-3 backdrop-blur-sm">
+                                                <Icon className="h-6 w-6 text-white" />
                                             </div>
-                                        ))}
+                                            <h3 className="text-2xl font-semibold text-white">
+                                                {service.title}
+                                            </h3>
+                                        </div>
+                                        <div className="details-container space-y-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
+                                            <p className="text-md leading-relaxed text-gray-200">
+                                                {service.description}
+                                            </p>
+                                            <div className="space-y-2">
+                                                {service.items.map((item, itemIndex) => (
+                                                    <div key={itemIndex} className="flex items-center gap-2">
+                                                        <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                                                        <span className="text-md font-medium text-white">{item}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </a>

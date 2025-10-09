@@ -7,8 +7,10 @@ const services = serviceSec;
 const ServiceSection = () => {
   return (
     <section className="flex justify-center py-20">
-      <div className="container">
-        <div className="mx-auto max-w-6xl space-y-12">
+      <div className="container relative">
+        <div className="absolute inset-0 -z-10 [background-image:radial-gradient(currentColor_1px,transparent_1px)] [background-size:48px_48px] text-neutral-300 dark:text-neutral-700 [mask-image:linear-gradient(to_bottom,transparent,white,white,white,transparent)]" />
+
+        <div className="mx-auto space-y-12 lg:px-4">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               Our Core IT Servcies
@@ -24,26 +26,40 @@ const ServiceSection = () => {
               return (
                 <div key={index}>
                   <a href={`/services/${service.slug}`} target="_blank">
-                    <div className="border-border space-y-6 rounded-lg border p-8 transition-shadow hover:shadow-sm">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-muted rounded-full p-3">
-                          <Icon className="h-6 w-6" />
-                        </div>
-                        <h3 className="text-xl font-semibold">{service.title}</h3>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                      <div className="space-y-2">
-                        {service.items.map((item, itemIndex) => (
-                          <div key={itemIndex} className="flex items-center gap-2">
-                            <div className="bg-foreground h-1.5 w-1.5 rounded-full" />
-                            <span className="text-sm font-medium">{item}</span>
+                    <div
+                      className="group relative h-96 w-full overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"
+
+                      style={{
+                        backgroundImage: `url(/low-res/${service.image})`
+                      }}
+                    >
+                      <div className="absolute inset-0 z-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/70" />
+                      <div className="absolute inset-0 z-0  bg-gradient-to-t from-transparent to-black/60 max-h-3/5" />
+                      <div className="relative z-10 flex h-full flex-col justify-between space-y-4 pt-4">
+                        <div className="flex items-center gap-4">
+                          <div className="bg-muted/70 rounded-full p-3 backdrop-blur-sm">
+                            <Icon className="h-6 w-6 text-white" />
                           </div>
-                        ))}
+                          <h3 className="text-2xl font-semibold text-white">
+                            {service.title}
+                          </h3>
+                        </div>
+                        <div className="details-container space-y-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
+                          <p className="text-md leading-relaxed text-gray-200">
+                            {service.description}
+                          </p>
+                          <div className="space-y-2">
+                            {service.items.map((item, itemIndex) => (
+                              <div key={itemIndex} className="flex items-center gap-2">
+                                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                                <span className="text-md font-medium text-white">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    </a>
+                  </a>
                 </div>
               );
             })}

@@ -1,6 +1,6 @@
 'use client'
 
-import { Wifi, Zap } from "lucide-react";
+import { Code, Wifi, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +18,7 @@ interface Hero115Props {
     imageAlt?: string;
 }
 
-const HeroSection = ({ icon = <Wifi className="size-6" />,
+const HeroSection = ({ icon = <Code className="size-6" />,
     heading = "Blocks built with Shadcn & Tailwind",
     description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
     button = {
@@ -27,7 +27,7 @@ const HeroSection = ({ icon = <Wifi className="size-6" />,
         url: "https://www.shadcnblocks.com",
     },
     trustText = "Trusted by 25.000+ Businesses Worldwide",
-    imageSrc = "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+    imageSrc = "/hero-sec2.jpg",
     imageAlt = "placeholder", }: Hero115Props) => {
     return (
         <div>
@@ -68,7 +68,7 @@ const HeroSection = ({ icon = <Wifi className="size-6" />,
                         <img
                             src={imageSrc}
                             alt={imageAlt}
-                            className="mx-auto h-full max-h-[524px] w-full max-w-full rounded-2xl object-cover"
+                            className="h-full max-h-[700px] w-full max-w-full object-cover"
                         />
                     </div>
                 </div>

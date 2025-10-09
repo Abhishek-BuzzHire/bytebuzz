@@ -2,7 +2,7 @@ import { serviceSec } from "@/data/data";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-interface Footer7Props {
+interface FooterProps {
     logo?: {
         url: string;
         src: string;
@@ -54,17 +54,17 @@ const defaultLegalLinks = [
 
 const FooterSection = ({
     logo = {
-        url: "https://www.shadcnblocks.com",
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
-        alt: "logo",
+        url: "https://bytebuzz.in",
+        src: "/logo.png",
+        alt: "ByteBuzz.in",
         title: "ByteBuzz.in",
     },
     sections = defaultSections,
     description = "A collection of components for your startup business or side project.",
     socialLinks = defaultSocialLinks,
-    copyright = "© 2024 Shadcnblocks.com. All rights reserved.",
+    copyright = "© 2025 ByteBuzz.com. All rights reserved.",
     legalLinks = defaultLegalLinks,
-}: Footer7Props) => {
+}: FooterProps) => {
     return (
         <section className=" flex justify-center pt-20 px-10">
             <div className="container">
