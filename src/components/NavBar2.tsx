@@ -96,7 +96,7 @@ const NavBar = () => {
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink
-                                    href="#"
+                                    href="/about"
                                     className={navigationMenuTriggerStyle()}
                                 >
                                     About

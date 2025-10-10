@@ -62,7 +62,7 @@ const FooterSection = ({
     sections = defaultSections,
     description = "A collection of components for your startup business or side project.",
     socialLinks = defaultSocialLinks,
-    copyright = "© 2025 ByteBuzz.com. All rights reserved.",
+    copyright = "© 2025 ByteBuzz.in. All rights reserved.",
     legalLinks = defaultLegalLinks,
 }: FooterProps) => {
     return (
