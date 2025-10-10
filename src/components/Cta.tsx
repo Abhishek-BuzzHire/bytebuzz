@@ -16,16 +16,16 @@ interface Cta {
 }
 
 const Cta = ({
-  heading = "Call to Action",
-  description = "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+  heading,
+  description,
   buttons = {
     primary: {
-      text: "Buy Now",
-      url: "https://www.shadcnblocks.com",
+      text: "",
+      url: "",
     },
     secondary: {
-      text: "Contact Us",
-      url: "https://www.shadcnblocks.com",
+      text: "",
+      url: "",
     },
   },
 }: Cta) => {
@@ -43,7 +43,7 @@ const Cta = ({
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               {buttons.primary && (
                 <Button size="lg" className="w-full sm:w-auto" asChild>
-                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
+                  <a href={buttons.primary.url} target="_blank">{buttons.primary.text}</a>
                 </Button>
               )}
               {buttons.secondary && (

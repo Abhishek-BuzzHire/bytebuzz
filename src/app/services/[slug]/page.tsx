@@ -16,7 +16,7 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
     if (!service) return notFound();
 
     return (
-        <section className="pb-20">
+        <section className="px-4 pb-20">
             {/* Full Width Hero with Background Image */}
             <div
                 className="relative flex min-h-[500px] items-center justify-center bg-cover bg-center bg-no-repeat py-32"
@@ -37,13 +37,13 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
 
             {/* Intro Section */}
             <div className="py-16">
-                <div className="px-16 mb-12">
+                <div className="px-2 lg:px-16 mb-12">
                     <p className="text-foreground text-xl leading-relaxed">
                         {service.description}
                     </p>
                 </div>
                 <div className="w-full bg-accent p-8 mt-8 mb-16 flex justify-center">
-                    <div className="flex flex-wrap gap-8 justify-center  px-12">
+                    <div className="flex flex-wrap gap-8 justify-center lg:px-12">
                         {service.highlights.map((card, i) => (
                             <div key={i} className="border-border bg-background rounded-lg border p-8 transition-shadow hover:shadow-sm space-y-4">
                                 <Image src={card.icon} alt={card.label} width={64} height={64} />
@@ -85,7 +85,7 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
                         <div key={index}>
                             <a href={`/services/${service.slug}`}>
                                 <div
-                                    className="group relative h-108 w-125 overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"
+                                    className="group relative h-76 w-84 lg:h-108 lg:w-120 overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"
 
                                     style={{
                                         backgroundImage: `url(/low-res/${service.image})`

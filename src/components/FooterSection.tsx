@@ -32,10 +32,17 @@ const defaultSections = [
     {
         title: "Company",
         links: [
-            { name: "About", href: "#" },
-            { name: "Team", href: "#" },
-            { name: "Careers", href: "#" },
-            { name: "Contact", href: "#" },
+            { name: "About", href: "/about" },
+            { name: "Team", href: "/team" },
+            { name: "Contact", href: "/contact" },
+        ],
+    },
+    {
+        title: "Careers",
+        links: [
+            { name: "Career at ByteBuzz", href: "bytebuzz" },
+            { name: "Career at BuzzHire", href: "buzzhire" },
+            { name: "Explore Jobs", href: "jobs" },
         ],
     },
 ];
@@ -54,7 +61,7 @@ const defaultLegalLinks = [
 
 const FooterSection = ({
     logo = {
-        url: "https://bytebuzz.in",
+        url: "/",
         src: "/logo.png",
         alt: "ByteBuzz.in",
         title: "ByteBuzz.in",
@@ -80,7 +87,9 @@ const FooterSection = ({
                                     className="h-8"
                                 />
                             </a>
-                            <h2 className="text-xl font-semibold">{logo.title}</h2>
+                            <a href={logo.url}>
+                                <h2 className="text-xl font-semibold">{logo.title}</h2>
+                            </a>
                         </div>
                         <p className="text-muted-foreground max-w-[70%] text-sm">
                             {description}
@@ -98,31 +107,49 @@ const FooterSection = ({
                     <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
                         {sections.map((section, sectionIdx) => (
                             <div key={sectionIdx}>
-                                <h3 className="mb-4 font-bold">{section.title}</h3>
-                                <ul className="text-muted-foreground space-y-3 text-sm">
-                                    {section.links.map((link, linkIdx) => (
-                                        <li
-                                            key={linkIdx}
-                                            className="hover:text-primary font-medium"
-                                        >
-                                            <a href={link.href}>{link.name}</a>
-                                        </li>
-                                    ))}
-                                </ul>
+                                {section.title === "Careers" ? (
+                                    <div>
+                                        <h3 className="mb-4 font-bold">{section.title}</h3>
+                                        <ul className="text-muted-foreground space-y-3 text-sm">
+                                            {section.links.map((link, linkIdx) => (
+                                                <li
+                                                    key={linkIdx}
+                                                    className="hover:text-primary font-medium"
+                                                >
+                                                    <a href={`/careers/${link.href}`}>{link.name}</a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ) : (
+                                    <div>
+                                        <h3 className="mb-4 font-bold">{section.title}</h3>
+                                        <ul className="text-muted-foreground space-y-3 text-sm">
+                                            {section.links.map((link, linkIdx) => (
+                                                <li
+                                                    key={linkIdx}
+                                                    className="hover:text-primary font-medium"
+                                                >
+                                                    <a href={link.href}>{link.name}</a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         ))}
                         <div>
                             <h3 className="mb-4 font-bold">Serives</h3>
                             <ul className="text-muted-foreground space-y-3 text-sm">
-                        {services.map((link, index)=> (
-                            <li
-                                            key={index}
-                                            className="hover:text-primary font-medium"
-                                        >
-                                            <a href={`/services/${link.slug}`}>{link.title}</a>
-                                        </li>
-                        ))}
-                        </ul>
+                                {services.map((link, index) => (
+                                    <li
+                                        key={index}
+                                        className="hover:text-primary font-medium"
+                                    >
+                                        <a href={`/services/${link.slug}`}>{link.title}</a>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>

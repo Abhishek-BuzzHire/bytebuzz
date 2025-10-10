@@ -13,21 +13,21 @@ export const aboutData: about[] = [
     id: "feature-1",
     title: "Our Story",
     description:
-      "Clean and intuitive interface built with the latest design principles. Optimized for the best user experience.",
+      "Every great idea begins with a simple question “Can we make this better?” That's how ByteBuzz was born. A small group of tech enthusiasts came together with one goal: to simplify technology and help businesses grow faster through smart, scalable IT solutions.",
     image: "story.jpg",
   },
   {
     id: "feature-2",
     title: "Mission",
     description:
-      "Fully responsive design that works seamlessly across all devices and screen sizes. Perfect for any platform.",
-    image: "mission-org.jpg",
+      "We've grown into a team of developers, designers, and data experts who believe technology should be practical, beautiful, and impactful. Every line of code we write and every solution we design is focused on one thing - helping businesses move forward.",
+    image: "mission.jpg",
   },
   {
     id: "feature-3",
     title: "Vision",
     description:
-      "Simple integration process with comprehensive documentation and dedicated support team.",
+      "We believe in creating long-lasting partnerships rather than one-time projects. Our focus is on offering a superior customer experience through transparency, innovation, and reliability in everything we do.",
     image: "vision.jpg",
   },
 ]
@@ -684,30 +684,27 @@ export interface TeamMember {
 export const members = [
   {
     id: "member-1",
-    name: "Sarah Chen",
-    role: "CEO & Founder",
-    image: "1.jpg",
-    github: "#",
-    twitter: "#",
-    linkedin: "#",
+    name: "Satyajeet Mishra",
+    role: "Founder",
+    image: "/satyajeet-mishra.jpg",
+
+    linkedin: "https://www.linkedin.com/in/satyajeet007/",
   },
   {
     id: "member-2",
-    name: "Marcus Rodriguez",
-    role: "CTO",
-    image: "2.jpg",
-    github: "#",
-    twitter: "#",
-    linkedin: "#",
+    name: "Ankit Shukla",
+    role: "Founder",
+    image: "/ankit-shukla.jpg",
+
+    linkedin: "https://www.linkedin.com/in/ankitshukla3/",
   },
   {
     id: "member-3",
-    name: "Emily Watson",
-    role: "Head of Design",
-    image: "3.jpg",
-    github: "#",
-    twitter: "#",
-    linkedin: "#",
+    name: "Atul Sharma",
+    role: "Chief Technical Officer",
+    image: "/atul-sharma.jpg",
+
+    linkedin: "https://www.linkedin.com/in/atul-sharma-a4072514/",
   },
 ]
 

@@ -1,32 +1,31 @@
 'use client'
 
 import { AboutSection } from "@/components/AboutSection";
-import { Clientele } from "@/components/Clientele";
 import { ContactSection } from "@/components/ContactSection";
 import { Cta } from "@/components/Cta";
-import { FooterSection } from "@/components/FooterSection";
 import HeroSection from "@/components/HeroSection";
 import { ServiceSection } from "@/components/SeriviceSection";
 import { Team } from "@/components/TeamSection";
 
 const HomePage = () => {
     return (
-        <div className="lg:px-0 sm:px-4">
+        <div className="overflow-hidden">
             <HeroSection heading={"SaaS Services For Your Needs"} description={"We make businesses go big through our tech services that optimizes and enhances your business activities everyday."} button={{
                 text: "Explore More",
                 icon: undefined,
                 url: "/"
             }} />
 
-            <AboutSection heading={"About Section Title"}
-                description={"Pariatur aliqua veniam eiusmod nisi pariatur dolore ipsum aliqua do adipisicing. Consectetur consectetur cupidatat dolore eu dolor cupidatat. Laboris id anim in exercitation minim do aliquip eiusmod laborum est proident. Tempor minim aute eiusmod aute reprehenderit in velit sunt laboris nulla reprehenderit excepteur."}
-                linkText={"Book a consultation"}
+            <AboutSection heading={"How It All Started"}
+                description={"ByteBuzz (a unit of BuzzHire Private Limited) was established in September 2025 with a clear mission — to help businesses harness the power of technology in the smartest and most efficient way possible. At ByteBuzz, we integrate the industry's best technologies to match each customer's unique needs and deliver them as a service, backed by our strong commitment to excellence."}
+                linkText="See our services"
+                linkUrl="/services"
                 />
             <ServiceSection />
-            <Cta heading={"Call to Action"} description={"Sit cillum reprehenderit quis magna esse ipsum officia ex commodo."} buttons={{
+            <Cta heading={"Ready to Scale"} description={"Sit cillum reprehenderit quis magna esse ipsum officia ex commodo."} buttons={{
                 primary: {
                     text: "Book a call",
-                    url: ""
+                    url: "/contact"
                 },
                 secondary: {
                     text: "Explore more",

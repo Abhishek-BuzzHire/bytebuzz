@@ -31,7 +31,7 @@ const HeroSection = ({ icon = <Code className="size-6" />,
     imageAlt = "placeholder", }: Hero115Props) => {
     return (
         <div>
-            <section className="flex justify-center overflow-hidden py-20">
+            <section className="flex justify-center py-20">
                 <div className="container">
                     <div className="flex flex-col gap-5">
                         <div className="relative flex flex-col gap-5">

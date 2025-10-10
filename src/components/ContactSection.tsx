@@ -10,7 +10,7 @@ const contact = contactdata;
 
 const ContactSection = () => {
   return (
-    <section className="flex justify-center py-20">
+    <section className="px-4 flex justify-center py-20">
       <div className="container relative">
         <div className="absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
           <div className="size-[800px] rounded-full border border-neutral-800/60 dark:border-neutral-200/20 [mask-image:radial-gradient(white,transparent)]" />
@@ -18,7 +18,7 @@ const ContactSection = () => {
         </div>
 
 
-        <div className=" mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-2xl flex-col gap-10">
             <div className="text-center lg:text-left">
               <h1 className="mb-2 text-5xl font-semibold lg:mb-1 lg:text-6xl">

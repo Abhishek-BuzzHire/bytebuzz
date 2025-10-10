@@ -21,7 +21,7 @@ const Team = ({
   return (
     <section className="py-24 lg:py-20">
       <div className="container mx-auto lg:px-4">
-        <div className="mb-16 text-center">
+        <div className="px-4 mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl">
             {heading}
           </h2>
@@ -52,7 +52,7 @@ const Team = ({
                     <div className="flex gap-3 justify-center">
                       {member.github && (
                         <a
-                          href={member.github}
+                          href={member.github} target="_blank"
                           className="bg-primary rounded-lg p-2"
                         >
                           <Github className="text-white size-6" />
@@ -60,7 +60,7 @@ const Team = ({
                       )}
                       {member.twitter && (
                         <a
-                          href={member.twitter}
+                          href={member.twitter} target="_blank"
                           className="bg-primary rounded-lg p-2"
                         >
                           <Twitter className="text-white size-6" />
@@ -68,7 +68,7 @@ const Team = ({
                       )}
                       {member.linkedin && (
                         <a
-                          href={member.linkedin}
+                          href={member.linkedin} target="_blank"
                           className="bg-primary rounded-lg p-2"
                         >
                           <Linkedin className="text-white size-6" />

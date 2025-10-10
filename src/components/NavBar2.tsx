@@ -31,19 +31,19 @@ import { ThemeToggle } from "./ThemeToggle";
 const careers: { title: string; href: string; description: string }[] = [
     {
         title: "Career at ByteBuzz",
-        href: "#",
+        href: "bytebuzz",
         description:
             "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
         title: "Career at BuzzHire",
-        href: "#",
+        href: "buzzhire",
         description:
             "For sighted users to preview content available behind a link.",
     },
     {
         title: "Explore Jobs",
-        href: "#",
+        href: "jobs",
         description:
             "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     },
@@ -72,6 +72,22 @@ const NavBar = () => {
                     <NavigationMenu className="hidden lg:block">
                         <NavigationMenuList>
                             <NavigationMenuItem>
+                                <NavigationMenuLink
+                                    href="/"
+                                    className={navigationMenuTriggerStyle()}
+                                >
+                                    Home
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <NavigationMenuLink
+                                    href="/about"
+                                    className={navigationMenuTriggerStyle()}
+                                >
+                                    About
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
                                 <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="grid w-[600px] grid-cols-2 p-3">
@@ -95,28 +111,12 @@ const NavBar = () => {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink
-                                    href="/about"
-                                    className={navigationMenuTriggerStyle()}
-                                >
-                                    About
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink
-                                    href="#"
-                                    className={navigationMenuTriggerStyle()}
-                                >
-                                    Team
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
                                 <NavigationMenuTrigger>Careers</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="grid w-[600px] grid-cols-2 p-3">
                                         {careers.map((career, index) => (
                                             <NavigationMenuLink
-                                                href={career.href}
+                                                href={`/careers/${career.href}`}
                                                 key={index}
                                                 className="rounded-md p-3 transition-colors hover:bg-muted/70"
                                             >
@@ -138,7 +138,9 @@ const NavBar = () => {
                     <div className="hidden items-center gap-4 lg:flex">
                         {/* <Button variant="outline">Contact</Button> */}
                         <ThemeToggle />
-                        <Button>Contact</Button>
+                        <a href="/contact">
+                            <Button className="cursor-pointer">Contact</Button>
+                        </a>
                     </div>
                     <Sheet>
                         <SheetTrigger asChild className="lg:hidden">
@@ -154,7 +156,7 @@ const NavBar = () => {
                                         className="flex items-center gap-2"
                                     >
                                         <img
-                                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
+                                            src="/logo.png"
                                             className="max-h-8"
                                             alt="ByteBuzz.in"
                                         />
@@ -165,6 +167,14 @@ const NavBar = () => {
                                 </SheetTitle>
                             </SheetHeader>
                             <div className="flex flex-col p-4">
+                                <a href="/" className="font-medium">
+                                    Home
+                                </a>
+                                <div className="flex flex-col gap-6">
+                                    <a href="/about" className="font-medium">
+                                        About
+                                    </a>
+                                </div>
                                 <Accordion type="single" collapsible className="mt-4 mb-2">
                                     <AccordionItem value="solutions" className="border-none">
                                         <AccordionTrigger className="text-base hover:no-underline">
@@ -192,15 +202,6 @@ const NavBar = () => {
                                         </AccordionContent>
                                     </AccordionItem>
                                 </Accordion>
-                                <div className="flex flex-col gap-6">
-                                    <a href="#" className="font-medium">
-                                        About
-                                    </a>
-                                    <a href="#" className="font-medium">
-                                        Team
-                                    </a>
-                                    
-                                </div>
                                 <Accordion type="single" collapsible className="mt-4 mb-2">
                                     <AccordionItem value="solutions" className="border-none">
                                         <AccordionTrigger className="text-base hover:no-underline">
@@ -230,7 +231,10 @@ const NavBar = () => {
                                 </Accordion>
                                 <div className="mt-6 flex flex-col gap-4">
                                     {/* <Button variant="outline">Contact</Button> */}
-                                    <Button>Contact</Button>
+                                    <ThemeToggle />
+                                    <a href="/contact" className="cursor-pointer">
+                                        <Button>Contact</Button>
+                                    </a>
                                 </div>
                             </div>
                         </SheetContent>

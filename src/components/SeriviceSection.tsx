@@ -11,7 +11,7 @@ const ServiceSection = () => {
         <div className="absolute inset-0 -z-10 [background-image:radial-gradient(currentColor_1px,transparent_1px)] [background-size:48px_48px] text-neutral-300 dark:text-neutral-700 [mask-image:linear-gradient(to_bottom,transparent,white,white,white,transparent)]" />
 
         <div className="mx-auto space-y-12 lg:px-4">
-          <div className="space-y-4 text-center">
+          <div className="px-4 space-y-4 text-center">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               Our Core IT Servcies
             </h2>

@@ -31,7 +31,7 @@ const AboutSection = ({
                     <div className="absolute top-[40%] right-[20%] size-[400px] rounded-full bg-blue-500/30 blur-[120px]" />
                     <div className="absolute bottom-0 left-[30%] size-[250px] rounded-full bg-teal-400/30 blur-[120px]" />
                 </div>
-                <div className="lg:max-w-full">
+                <div className="px-4 lg:max-w-full">
 
                     <h2 className="mb-3 text-xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
                         {heading}
