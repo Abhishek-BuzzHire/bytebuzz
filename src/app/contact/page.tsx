@@ -1,15 +1,39 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { contactdata } from "@/data/data";
-import SimpleMap from "@/components/Map";
 
 const contact = contactdata;
 
 const ContactPage = () => {
+    const [formData, setFormData] = useState({ fullname: '', phone: '', email: '', subject: '', message: '' });
+    const [status, setStatus] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('Sending...');
+
+        try {
+            const res = await fetch('https://script.google.com/macros/s/AKfycbze1tEO4v-8aXIQnLCW7PUX6t3Jyx8R5_G54b8POtquhevkSYeahpWWtosDbELUnnQn8g/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            setStatus('Message sent successfully!');
+            setFormData({ fullname: '', phone: '', email: '', subject: '', message: '' });
+        } catch (error) {
+            console.error(error);
+            setStatus('Failed to send message.');
+        }
+    };
+
     return (
         <section className="px-4 flex flex-wrap justify-center py-20 overflow-hidden gap-24">
             <div className="container relative">
@@ -52,31 +76,34 @@ const ContactPage = () => {
 
                         </div>
                     </div>
-                    <div className="mx-auto bg-background flex max-w-3xl flex-col gap-6 rounded-lg border p-10">
-                        <div className="flex gap-4">
-                            <div className="grid w-full items-center gap-4">
-                                <Label htmlFor="firstname">Full Name</Label>
-                                <Input type="text" id="fullname" placeholder="Full Name" />
+                    <form action="post" onSubmit={handleSubmit}>
+                        <div className="mx-auto bg-background flex max-w-3xl flex-col gap-6 rounded-lg border p-10">
+                            <div className="flex gap-4">
+                                <div className="grid w-full items-center gap-4">
+                                    <Label htmlFor="fullname">Full Name</Label>
+                                    <Input type="text" id="fullname" placeholder="Full Name" value={formData.fullname} onChange={(e) => setFormData({ ...formData, fullname: e.target.value })} required />
+                                </div>
+                                <div className="grid w-full items-center gap-4">
+                                    <Label htmlFor="phone">Phone</Label>
+                                    <Input type="number" id="phone" placeholder="Phone" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
+                                </div>
                             </div>
                             <div className="grid w-full items-center gap-4">
-                                <Label htmlFor="lastname">Phone</Label>
-                                <Input type="number" id="phone" placeholder="Phone" />
+                                <Label htmlFor="email">Email</Label>
+                                <Input type="email" id="email" placeholder="Email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
                             </div>
+                            <div className="grid w-full items-center gap-4">
+                                <Label htmlFor="subject">Subject</Label>
+                                <Input type="text" id="subject" placeholder="Subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
+                            </div>
+                            <div className="grid w-full gap-4">
+                                <Label htmlFor="message">Message</Label>
+                                <Textarea placeholder="Type your message here." id="message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required />
+                            </div>
+                            <Button type="submit" className="w-full">Send Message</Button>
+                            <p className="text-foreground text-md text-center">{status}</p>
                         </div>
-                        <div className="grid w-full items-center gap-4">
-                            <Label htmlFor="email">Email</Label>
-                            <Input type="email" id="email" placeholder="Email" />
-                        </div>
-                        <div className="grid w-full items-center gap-4">
-                            <Label htmlFor="subject">Subject</Label>
-                            <Input type="text" id="subject" placeholder="Subject" />
-                        </div>
-                        <div className="grid w-full gap-4">
-                            <Label htmlFor="message">Message</Label>
-                            <Textarea placeholder="Type your message here." id="message" />
-                        </div>
-                        <Button className="w-full">Send Message</Button>
-                    </div>
+                    </form>
                 </div>
             </div>
             {/* <SimpleMap /> */}

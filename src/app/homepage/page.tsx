@@ -10,7 +10,7 @@ import { Team } from "@/components/TeamSection";
 const HomePage = () => {
     return (
         <div className="overflow-hidden">
-            <HeroSection heading={"SaaS Services For Your Needs"} description={"We make businesses go big through our tech services that optimizes and enhances your business activities everyday."} button={{
+            <HeroSection heading={"IT Solutions Tailored for Your Business Needs"} description={"We make businesses go big through our tech services that optimizes and enhances your business activities everyday."} button={{
                 text: "Explore More",
                 icon: undefined,
                 url: "/"

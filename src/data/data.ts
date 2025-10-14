@@ -685,26 +685,34 @@ export const members = [
   {
     id: "member-1",
     name: "Satyajeet Mishra",
-    role: "Founder",
+    role: "Co-Founder",
     image: "/satyajeet-mishra.jpg",
 
     linkedin: "https://www.linkedin.com/in/satyajeet007/",
   },
   {
     id: "member-2",
+    name: "Atul Sharma",
+    role: "Head of Technology",
+    image: "/atul-sharma.jpg",
+
+    linkedin: "https://www.linkedin.com/in/atul-sharma-a4072514/",
+  },
+  {
+    id: "member-3",
     name: "Ankit Shukla",
-    role: "Founder",
+    role: "Co-Founder",
     image: "/ankit-shukla.jpg",
 
     linkedin: "https://www.linkedin.com/in/ankitshukla3/",
   },
   {
-    id: "member-3",
-    name: "Atul Sharma",
-    role: "Chief Technical Officer",
-    image: "/atul-sharma.jpg",
+    id: "member-4",
+    name: "Saurabh Singh",
+    role: "Co-Founder",
+    image: "/saurabh-singh.jpg",
 
-    linkedin: "https://www.linkedin.com/in/atul-sharma-a4072514/",
+    linkedin: "https://www.linkedin.com/in/saurabh1984/",
   },
 ]
 
