@@ -52,8 +52,8 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
                         ))}
                     </div>
                 </div>
-                <div className="container mx-auto flex flex-col lg:flex-row gap-8 py-16">
-                    <div className="mx-auto max-w-3xl space-y-8 text-left mb-8">
+                <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between gap-8 py-16 lg:px-12">
+                    <div className="max-w-3xl space-y-8 text-left mb-8">
                         {service.sections.map((section, idx) => (
                             <div key={idx} className="space-y-4">
                                 <h2 className="text-3xl font-semibold tracking-tight md:text-3xl">

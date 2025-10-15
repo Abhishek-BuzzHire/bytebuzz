@@ -13,22 +13,22 @@ export const aboutData: about[] = [
     id: "feature-1",
     title: "Our Story",
     description:
-      "Every great idea begins with a simple question “Can we make this better?” That's how ByteBuzz was born. A small group of tech enthusiasts came together with one goal: to simplify technology and help businesses grow faster through smart, scalable IT solutions.",
+      "Every great idea begins with a simple question — “Can we make this better?” That question sparked the beginning of ByteBuzz. What started as a small group of passionate tech enthusiasts quickly evolved into a mission-driven team united by one vision: to simplify technology and empower businesses to grow faster, smarter, and stronger.",
     image: "story.jpg",
   },
   {
     id: "feature-2",
     title: "Mission",
     description:
-      "We've grown into a team of developers, designers, and data experts who believe technology should be practical, beautiful, and impactful. Every line of code we write and every solution we design is focused on one thing - helping businesses move forward.",
+      "We've evolved into a dynamic team of developers, designers, and data engineers united by a single belief technology should drive real impact. At ByteBuzz, we don't just build software; we craft intelligent, scalable, and user-centric solutions that empower businesses to accelerate growth and innovate faster.",
     image: "mission.jpg",
   },
   {
     id: "feature-3",
     title: "Vision",
     description:
-      "We believe in creating long-lasting partnerships rather than one-time projects. Our focus is on offering a superior customer experience through transparency, innovation, and reliability in everything we do.",
-    image: "vision.jpg",
+      "We are driven to build enduring partnerships, not fleeting projects. Every solution we deliver is fueled by bold innovation, uncompromising transparency, and rock-solid reliability. Our mission is to redefine the customer experience making it seamless, impactful, and transformative.",
+    image: "vision.png",
   },
 ]
 
@@ -44,10 +44,10 @@ export interface ServiceSec {
 export const serviceSec: ServiceSec[] = [
   {
     icon: Database,
-    title: "Database",
+    title: "Database & Data Engineering",
     description:
-      "Ensure the reliability, security, and optimum performance of databases that underpin all workflows",
-    items: ["MySQL, PostgreSQL, DB2, SQL Server", "Monitoring, and Optimization", "Data Backup & Recovery Solutions"],
+      "Data is the new fuel of business but only if it is clean, connected, and actionable. At BuzzByte, we help you build strong data foundations that power insights, automation, and smarter decisions. From designing efficient databases to building full-scale data pipelines, our team makes sure your data works for you, not against you.",
+    items: ["Transforming Data into Decisions."],
     slug: "database-service",
     image: "database.jpg",
   },
@@ -55,18 +55,18 @@ export const serviceSec: ServiceSec[] = [
     icon: Code,
     title: "Software Development",
     description:
-      "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
-    items: ["Web Application Development", "Custom ERP/CRM Solutions", "SaaS (Software as a Service)"],
+      "Every great business runs on great software. At BuzzByte, we build custom software solutions that help you streamline operations, improve efficiency, and deliver exceptional user experiences. From websites and mobile apps to enterprise platforms, we turn your ideas into powerful, reliable, and scalable products.",
+    items: ["Turning Ideas into Scalable Digital Solutions."],
     slug: "software-development-service",
     image: "web-dev.jpg",
 
   },
   {
     icon: Braces,
-    title: "Data Engineering",
+    title: "Data Science & AI",
     description:
-      "Design, build, and maintain data pipelines, Ensure raw data is ingested, cleaned, transformed, stored, and delivered as actionable information.",
-    items: [" Data Source Assessment", " Data Pipeline Design", "Data Modelling & Schema Design"],
+      "Artificial Intelligence is not the future it is today. At BuzzByte, we help businesses turn raw data into real intelligence through smart AI and Data Science solutions. Whether it is predictive analytics, automation, or custom AI models, we build solutions that give you an edge faster decisions, better insights, and smarter workflows.",
+    items: ["From Data to Intelligence — Automate, Predict, and Grow."],
     slug: "data-engineering-service",
     image: "data-engineering.jpg",
   },
@@ -74,8 +74,8 @@ export const serviceSec: ServiceSec[] = [
     icon: Infinity,
     title: "Cloud & DevOps",
     description:
-      "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
-    items: ["Cloud Infrastructure Setup & Optimization", "Cloud Cost Management", " Hybrid and Multi-Cloud Strategy"],
+      "Modern businesses move fast your technology should too. At BuzzByte, we help organizations harness the power of the cloud and streamline delivery with DevOps practices that boost efficiency, reduce downtime, and accelerate innovation. Whether you are migrating to the cloud, automating workflows, or optimizing your CI/CD pipeline, we make sure your systems are built to deliver quickly, securely, and at scale.",
+    items: ["Faster Deployments. Smarter Scaling. Stronger Teams."],
     slug: "cloud-devops-service",
     image: "devops.jpg",
   },
@@ -83,8 +83,8 @@ export const serviceSec: ServiceSec[] = [
     icon: ShieldCheck,
     title: "CyberSecurity",
     description:
-      "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
-    items: ["Security solutions", "Compliance"],
+      "In a world where everything is connected, security cannot be an afterthought. At BuzzByte, we help businesses protect what matters most is their data, people, and reputation. Our cybersecurity team blends smart tech with real expertise to keep your systems safe, resilient, and ready for anything.",
+    items: ["Stay Secure. Stay Ahead."],
     slug: "cybersecurity-service",
     image: "cybersecurity.jpg",
   },
@@ -92,8 +92,8 @@ export const serviceSec: ServiceSec[] = [
     icon: Router,
     title: "IT Infrastructure Setup & Support",
     description:
-      "Esse velit sit sint nostrud consequat culpa velit et ex ullamco nisi. Esse velit sit sint nostrud et ex ullamco nisi.",
-    items: [" Network setup (LAN, WAN, Wi-Fi, VPN)", "Server installation and configuration", "IT helpdesk and technical support"],
+      "Your business deserves an IT backbone that is reliable, secure, and built to grow. At BuzzByte, we design, deploy, and manage end-to-end IT infrastructure from servers and networks to cloud and on-prem setups so your technology never holds you back.",
+    items: ["Build Strong. Run Smooth. Scale Fast."],
     slug: "it-setup-support-service",
     image: "it-support.jpg",
   },

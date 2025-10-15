@@ -1,5 +1,7 @@
 import { aboutData } from "@/data/data";
 import { ArrowRight } from "lucide-react";
+import React from "react";
+import { Button } from "./ui/button";
 
 interface Feature {
     id: string;
@@ -14,17 +16,20 @@ interface AboutSec {
     linkUrl?: string;
     linkText?: string;
     features?: Feature[];
+    onScroll: () => void;
 }
 
-const AboutSection = ({
+
+const AboutSection = React.forwardRef<HTMLDivElement, AboutSec>(({
     heading,
     description,
     linkUrl,
     linkText,
-    features = aboutData
-}: AboutSec) => {
+    features = aboutData,
+    onScroll
+}, ref) => {
     return (
-        <section className="flex justify-center py-20">
+        <section className="flex justify-center py-20" ref={ref}>
             <div className="relative container flex flex-col gap-16 lg:px-16">
                 <div className="absolute inset-0 -z-10 ">
                     <div className="absolute top-0 left-[10%] size-[300px] rounded-full bg-fuchsia-500/30 blur-[120px]" />
@@ -33,13 +38,13 @@ const AboutSection = ({
                 </div>
                 <div className="px-4 lg:max-w-full">
 
-                    <h2 className="mb-3 text-xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
+                    <h2 className="mb-3 text-xl font-semibold md:mb-4 md:text-4xl lg:text-5xl lg:mb-6">
                         {heading}
                     </h2>
                     <p className="text-muted-foreground mb-8 lg:text-lg">{description}</p>
-                    <a
-                        href={linkUrl}
-                        className="group flex items-center text-xs font-medium md:text-base lg:text-lg"
+                    <a  
+                        onClick={onScroll}
+                        className="group flex items-center text-xs font-medium md:text-base lg:text-lg hover:cursor-pointer"
                     >
                         {linkText}
                         <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
@@ -88,9 +93,20 @@ const AboutSection = ({
                         </div>
                     ))}
                 </div>
+                <a  href="/about" target="_blank"
+                        className="group flex justify-end"
+                    >   <Button variant={"outline"} className="items-center text-xs font-medium md:text-base lg:text-lg hover:cursor-pointer">
+                        Know more About us
+                        <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+                        </Button>
+                    </a>
             </div>
+            
         </section>
     );
-};
+}
+);
+
+AboutSection.displayName = "AboutSection";
 
 export { AboutSection };

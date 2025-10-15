@@ -84,11 +84,11 @@ const FooterSection = ({
                                     src={logo.src}
                                     alt={logo.alt}
                                     title={logo.title}
-                                    className="h-8"
+                                    className="h-12"
                                 />
                             </a>
                             <a href={logo.url}>
-                                <h2 className="text-xl font-semibold">{logo.title}</h2>
+                                <h2 className="text-3xl font-semibold"><span className="text-red-600">Byte</span><span className="text-indigo-600">Buzz</span></h2>
                             </a>
                         </div>
                         <p className="text-muted-foreground max-w-[70%] text-sm">

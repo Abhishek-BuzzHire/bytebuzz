@@ -1,18 +1,20 @@
 "use client";
 
+import React, { useRef } from "react";
 import { serviceSec } from "@/data/data";
 
 const services = serviceSec;
 
-const ServiceSection = () => {
+const ServiceSection = React.forwardRef<HTMLDivElement>((_props, ref) => {
+
   return (
-    <section className="flex justify-center py-20">
+    <section className="flex justify-center py-20" ref={ref}>
       <div className="container relative">
         <div className="absolute inset-0 -z-10 [background-image:radial-gradient(currentColor_1px,transparent_1px)] [background-size:48px_48px] text-neutral-300 dark:text-neutral-700 [mask-image:linear-gradient(to_bottom,transparent,white,white,white,transparent)]" />
 
-        <div className="mx-auto space-y-12 lg:px-4">
+        <div className="mx-auto space-y-12 lg:px-20">
           <div className="px-4 space-y-4 text-center">
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
               Our Core IT Servcies
             </h2>
             <p className="text-muted-foreground mx-auto max-w-2xl text-lg tracking-tight md:text-xl">
@@ -44,18 +46,19 @@ const ServiceSection = () => {
                             {service.title}
                           </h3>
                         </div>
-                        <div className="details-container space-y-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
-                          <p className="text-md leading-relaxed text-gray-200">
-                            {service.description}
-                          </p>
+                        <div className="details-container space-y-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
                           <div className="space-y-2">
                             {service.items.map((item, itemIndex) => (
                               <div key={itemIndex} className="flex items-center gap-2">
-                                <div className="h-1.5 w-1.5 rounded-full bg-white" />
-                                <span className="text-md font-medium text-white">{item}</span>
+                                <span className="text-lg font-medium text-white">{item}</span>
                               </div>
                             ))}
                           </div>
+
+                          <p className="text-md leading-relaxed text-gray-200">
+                            {service.description}
+                          </p>
+
                         </div>
                       </div>
                     </div>
@@ -68,6 +71,8 @@ const ServiceSection = () => {
       </div>
     </section>
   );
-};
+});
+
+ServiceSection.displayName = "ServiceSection"
 
 export { ServiceSection };

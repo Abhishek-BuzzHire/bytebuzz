@@ -1,10 +1,10 @@
 const AboutPage = () => {
     return (
-        <section className="flex justify-center py-20">
+        <section className="flex justify-center py-20 md:px-20">
             <div className="container">
                 <div className="mb-14 grid gap-5 text-center md:grid-cols-1 md:text-left">
-                    <div className="pr-6">
-                        <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:mb-10 lg:text-6xl text-right">Who <span className="text-primary">We</span> Are.</h1>
+                    <div className="px-8">
+                        <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:mb-10 lg:text-6xl text-center">Who <span className="text-primary">We</span> Are.</h1>
                         <p className="text-lg text-foreground font-semibold">ByteBuzz (a unit of BuzzHire Private Limited) was established in September 2025 with a clear mission — to help businesses harness the power of technology in the smartest and most efficient way possible. <br />
                             At ByteBuzz, we integrate the industry's best technologies to match each customer's unique needs and deliver them as a service, backed by our strong commitment to excellence. <br />
 
@@ -15,7 +15,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col items-center justify-start gap-6 lg:flex-row">
                     <div className="flex w-full flex-col items-start justify-start gap-24 lg:w-1/2">
-                        <div className="pr-6">
+                        <div className="px-8">
                             <h1 className="mb-6 text-4xl font-bold lg:mb-10">How We <span className="text-primary">Born</span>.</h1>
                             <p className="mb-9 lg:text-xl">Every great idea begins with a simple question “Can we make this better?”
                                 That's how ByteBuzz was born. A small group of tech enthusiasts came together with one goal: to simplify technology and help businesses grow faster through smart, scalable IT solutions.

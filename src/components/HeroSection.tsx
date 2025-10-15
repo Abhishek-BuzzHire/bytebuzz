@@ -4,7 +4,7 @@ import { Code, Wifi, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-interface Hero115Props {
+interface HeroProps {
     icon?: React.ReactNode;
     heading: string;
     description: string;
@@ -16,19 +16,17 @@ interface Hero115Props {
     trustText?: string;
     imageSrc?: string;
     imageAlt?: string;
+    onScroll?: () => void;
 }
 
-const HeroSection = ({ icon = <Code className="size-6" />,
-    heading = "Blocks built with Shadcn & Tailwind",
-    description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
-    button = {
-        text: "Discover Features",
-        icon: <Zap className="ml-2 size-4" />,
-        url: "https://www.shadcnblocks.com",
-    },
-    trustText = "Trusted by 25.000+ Businesses Worldwide",
+const HeroSection: React.FC<HeroProps> = ({ icon = <Code className="size-6" />,
+    heading,
+    description,
+    button,
+    trustText,
     imageSrc = "/hero-sec2.jpg",
-    imageAlt = "placeholder", }: Hero115Props) => {
+    imageAlt = "bytebuzz",
+    onScroll }: HeroProps) => {
     return (
         <div>
             <section className="flex justify-center py-20">
@@ -48,16 +46,16 @@ const HeroSection = ({ icon = <Code className="size-6" />,
                             <span className="mx-auto flex size-16 items-center justify-center rounded-full border md:size-20">
                                 {icon}
                             </span>
-                            <h2 className="mx-auto max-w-5xl text-center text-3xl font-medium text-balance md:text-6xl">
+                            <h2 className="mx-auto max-w-5xl text-center text-3xl font-medium text-balance md:text-5xl">
                                 {heading}
                             </h2>
-                            <p className="mx-auto max-w-3xl text-center text-muted-foreground md:text-lg">
+                            <p className="mx-auto max-w-3xl text-center text-muted-foreground md:text-xl text-lg">
                                 {description}
                             </p>
                             <div className="flex flex-col items-center justify-center gap-3 pt-3 pb-12">
-                                <Button size="lg" asChild>
-                                    <a href={button.url}>
-                                        {button.text} {button.icon}
+                                <Button size="lg" asChild onClick={onScroll}>
+                                    <a>
+                                        {button.text}{button.icon}
                                     </a>
                                 </Button>
                                 {trustText && (

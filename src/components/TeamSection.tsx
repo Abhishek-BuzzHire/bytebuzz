@@ -1,8 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { members, TeamMember } from "@/data/data";
-import Image from "next/image";
 
 interface Team {
   heading?: string;
@@ -15,22 +12,22 @@ const team = members
 
 const Team = ({
   heading = "Our Core Team",
-  description = "Our diverse team of experts brings together decades of experience in development, engineering, and database administration.",
+  description = "We are a diverse team of technologists, strategists, and innovators bringing decades of experience in development, engineering, data, product, marketing, and sales. Together, we blend tech expertise with business acumen to turn bold ideas into real impact.",
   members = team
 }: Team) => {
   return (
     <section className="py-24 lg:py-20">
       <div className="container mx-auto lg:px-4">
         <div className="px-4 mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl">
+          <h2 className="mb-6 text-3xl font-semibold tracking-tight lg:text-5xl">
             {heading}
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed">
+          <p className="text-muted-foreground mx-auto max-w-6xl text-lg tracking-tight md:text-xl">
             {description}
           </p>
         </div>
 
-        <div className="flex justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {members.map((member) => (
             <div key={member.id} className="p-6">
               <div className="group relative h-72 w-72 overflow-hidden rounded-lg bg-cover bg-center p-8 pt-4 transition-shadow hover:shadow-xl"

@@ -62,11 +62,11 @@ const NavBar = () => {
                     >
                         <img
                             src="/logo.png"
-                            className="max-h-8"
+                            className="max-h-12"
                             alt="ByteBuzz.in"
                         />
-                        <span className="text-lg font-semibold tracking-tighter">
-                            ByteBuzz.in
+                        <span className="text-3xl font-semibold">
+                            <span className="text-red-600">Byte</span><span className="text-indigo-600">Buzz</span>
                         </span>
                     </a>
                     <NavigationMenu className="hidden lg:block">
@@ -84,7 +84,7 @@ const NavBar = () => {
                                     href="/about"
                                     className={navigationMenuTriggerStyle()}
                                 >
-                                    About
+                                    About Us
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
@@ -160,81 +160,83 @@ const NavBar = () => {
                                             className="max-h-8"
                                             alt="ByteBuzz.in"
                                         />
-                                        <span className="text-lg font-semibold tracking-tighter">
-                                            ByteBuzz.in
+                                        <span className="text-xl font-semibold">
+                                            <span className="text-red-600">Byte</span><span className="text-indigo-600">Buzz</span>
                                         </span>
                                     </a>
                                 </SheetTitle>
                             </SheetHeader>
                             <div className="flex flex-col p-4">
-                                <a href="/" className="font-medium">
-                                    Home
-                                </a>
-                                <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-4">
+                                    <a href="/" className="font-medium">
+                                        Home
+                                    </a>
+
                                     <a href="/about" className="font-medium">
-                                        About
+                                        About Us
                                     </a>
                                 </div>
-                                <Accordion type="single" collapsible className="mt-4 mb-2">
-                                    <AccordionItem value="solutions" className="border-none">
-                                        <AccordionTrigger className="text-base hover:no-underline">
-                                            Services
-                                        </AccordionTrigger>
-                                        <AccordionContent>
-                                            <div className="grid md:grid-cols-2">
-                                                {services.map((service, index) => (
-                                                    <a
-                                                        href={`/services/${service.slug}`}
-                                                        key={index}
-                                                        className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                                                    >
-                                                        <div key={service.title}>
-                                                            <p className="mb-1 font-semibold text-foreground">
-                                                                {service.title}
-                                                            </p>
-                                                            <p className="text-sm text-muted-foreground">
-                                                                {service.description}
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                                <Accordion type="single" collapsible className="mt-4 mb-2">
-                                    <AccordionItem value="solutions" className="border-none">
-                                        <AccordionTrigger className="text-base hover:no-underline">
-                                            Careers
-                                        </AccordionTrigger>
-                                        <AccordionContent>
-                                            <div className="grid md:grid-cols-2">
-                                                {careers.map((career, index) => (
-                                                    <a
-                                                        href={career.href}
-                                                        key={index}
-                                                        className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                                                    >
-                                                        <div key={career.title}>
-                                                            <p className="mb-1 font-semibold text-foreground">
-                                                                {career.title}
-                                                            </p>
-                                                            <p className="text-sm text-muted-foreground">
-                                                                {career.description}
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                                <div className="mt-6 flex flex-col gap-4">
-                                    {/* <Button variant="outline">Contact</Button> */}
-                                    <ThemeToggle />
+                                <div className="flex flex-col">
+                                    <Accordion type="single" collapsible className="">
+                                        <AccordionItem value="solutions" className="border-none">
+                                            <AccordionTrigger className="text-base hover:no-underline">
+                                                Services
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="grid md:grid-cols-2">
+                                                    {services.map((service, index) => (
+                                                        <a
+                                                            href={`/services/${service.slug}`}
+                                                            key={index}
+                                                            className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                                                        >
+                                                            <div key={service.title}>
+                                                                <p className="mb-1 font-semibold text-foreground">
+                                                                    {service.title}
+                                                                </p>
+                                                                <p className="text-sm text-muted-foreground">
+                                                                    {service.description}
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="">
+                                        <AccordionItem value="solutions" className="border-none">
+                                            <AccordionTrigger className="text-base hover:no-underline">
+                                                Careers
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="grid md:grid-cols-2">
+                                                    {careers.map((career, index) => (
+                                                        <a
+                                                            href={career.href}
+                                                            key={index}
+                                                            className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                                                        >
+                                                            <div key={career.title}>
+                                                                <p className="mb-1 font-semibold text-foreground">
+                                                                    {career.title}
+                                                                </p>
+                                                                <p className="text-sm text-muted-foreground">
+                                                                    {career.description}
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </div>
+                                <div className="flex justify-between">
                                     <a href="/contact" className="cursor-pointer">
                                         <Button>Contact</Button>
                                     </a>
+                                    <ThemeToggle />
                                 </div>
                             </div>
                         </SheetContent>

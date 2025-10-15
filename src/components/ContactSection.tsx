@@ -46,10 +46,10 @@ const ContactSection = () => {
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-2xl flex-col gap-10">
             <div className="text-center lg:text-left">
-              <h1 className="mb-2 text-5xl font-semibold lg:mb-1 lg:text-6xl">
+              <h1 className="mb-2 text-5xl font-semibold lg:mb-1 lg:text-5xl">
                 Contact Us
               </h1>
-              <p className="text-muted-foreground text-md mt-4">We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!</p>
+              <p className="text-muted-foreground mx-auto max-w-2xl text-lg tracking-tight md:text-xl mt-4 ">We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {contact.map((item, index) => {

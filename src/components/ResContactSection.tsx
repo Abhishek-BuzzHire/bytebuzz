@@ -48,7 +48,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Info Grid */}
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-2">
           {contact.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -79,7 +79,7 @@ const ContactSection = () => {
       {/* Contact Form */}
       <form action="post" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-6 rounded-lg border p-8">
-          <div className="flex gap-4">
+          <div className="flex xl:flex-nowrap lg:flex-wrap gap-4">
             <div className="grid w-full items-center gap-4">
               <Label htmlFor="fullname">Full Name</Label>
               <Input type="text" id="fullname" placeholder="Full Name" value={formData.fullname} onChange={(e) => setFormData({ ...formData, fullname: e.target.value })} required />

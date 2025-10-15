@@ -34,7 +34,7 @@ const Cta = ({
       <div className="container">
         <div className="bg-accent rounded-lg p-8 md:rounded-xl lg:p-12">
           <div className="max-w-4xl">
-            <h3 className="mb-4 text-3xl font-semibold md:text-5xl lg:mb-6 lg:text-6xl">
+            <h3 className="mb-4 text-3xl font-semibold md:text-4xl lg:mb-6 lg:text-5xl">
               {heading}
             </h3>
             <p className="text-muted-foreground mb-8 text-lg font-medium lg:text-xl">
