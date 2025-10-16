@@ -101,7 +101,7 @@ const NavBar = () => {
                                                     <p className="mb-1 font-semibold text-foreground">
                                                         {service.title}
                                                     </p>
-                                                    <p className="text-sm text-muted-foreground">
+                                                    <p className="text-sm text-muted-foreground line-clamp-3">
                                                         {service.description}
                                                     </p>
                                                 </div>
@@ -194,7 +194,7 @@ const NavBar = () => {
                                                                 <p className="mb-1 font-semibold text-foreground">
                                                                     {service.title}
                                                                 </p>
-                                                                <p className="text-sm text-muted-foreground">
+                                                                <p className="text-sm text-muted-foreground line-clamp-2">
                                                                     {service.description}
                                                                 </p>
                                                             </div>

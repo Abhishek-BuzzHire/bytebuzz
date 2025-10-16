@@ -38,6 +38,9 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
             {/* Intro Section */}
             <div className="py-16">
                 <div className="px-2 lg:px-16 mb-12">
+                    <h2 className="text-3xl font-semibold tracking-tight md:text-4xl mb-4">
+                        {service.subhead}
+                    </h2>
                     <p className="text-foreground text-xl leading-relaxed">
                         {service.description}
                     </p>
@@ -55,15 +58,15 @@ const ServicePage = ({ params }: { params: Promise<{ slug: string }> }) => {
                 <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between gap-8 py-16 lg:px-12">
                     <div className="max-w-3xl space-y-8 text-left mb-8">
                         {service.sections.map((section, idx) => (
-                            <div key={idx} className="space-y-4">
-                                <h2 className="text-3xl font-semibold tracking-tight md:text-3xl">
+                            <div key={idx} className="space-y-2 lg:mb-16">
+                                <h2 className="text-3xl font-semibold tracking-tight md:text-4xl mb-8">
                                     {section.heading}
                                 </h2>
                                 {section.content.map((para, i) => (
                                     para.type === "paragraph" ? (
-                                        <p className="text-bold font-semibold text-lg" key={i}>{para.text}</p>
+                                        <p className="text-semibold text-md" key={i}>{para.text}</p>
                                     ) : (
-                                        <ul key={i} className="list-disc pl-6 space-y-2">
+                                        <ul key={i} className="list-disc pl-6 font-semibold space-y-2 text-xl">
                                             {para.items.map((item, j) => (
                                                 <li key={j}>{item}</li>
                                             ))}

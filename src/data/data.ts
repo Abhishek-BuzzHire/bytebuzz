@@ -44,7 +44,7 @@ export interface ServiceSec {
 export const serviceSec: ServiceSec[] = [
   {
     icon: Database,
-    title: "Database & Data Engineering",
+    title: "Data Engineering",
     description:
       "Data is the new fuel of business but only if it is clean, connected, and actionable. At BuzzByte, we help you build strong data foundations that power insights, automation, and smarter decisions. From designing efficient databases to building full-scale data pipelines, our team makes sure your data works for you, not against you.",
     items: ["Transforming Data into Decisions."],
@@ -111,6 +111,7 @@ export interface ServiceSection {
 export interface Service {
   slug: string; // used for dynamic route
   title: string;
+  subhead?: string,
   image: string;
   description: string;
   highlights: {
@@ -124,8 +125,9 @@ export const servicesData: Service[] = [
   {
     slug: "database-service",
     image: "/database.jpg",
-    title: "Database Service",
-    description: "We help businesses like yours ensure that their data is not just stored, but optimized, secured, and made actionable. Our Database Services ensure faster applications, zero downtime, and strong disaster recovery—so your business can scale confidently without worrying about data bottlenecks. We provide end-to-end database services – from designing robust systems to ensuring round-the-clock performance, secure backups, and seamless migrations. With our expertise across MySQL, PostgreSQL, Oracle, DB2, and SQL Server, we help your business run faster, safer, and smarter.",
+    title: "Data Engineering Services",
+    subhead: "Make Your Data Work Smarter for You",
+    description: "At ByteBuzz, we transform scattered information into a powerful, connected data ecosystem that fuels insights and innovation. Our data engineering solutions are built to be scalable, secure, and future-ready so your business can grow confidently on a strong data foundation.",
     highlights: [
       { icon: "/logos/mongodb.svg", label: "MongoDB" },
       { icon: "/logos/mysql.svg", label: "MySQL" },
@@ -134,61 +136,68 @@ export const servicesData: Service[] = [
     ],
     sections: [
       {
-        heading: "Database Design & Development (MySQL, PostgreSQL, Oracle, DB2, SQL Server)",
+        heading: "What We Do",
         content: [
           {
             type: 'list',
-            items: [
-              "Requirement Analysis: Understand client’s business needs, volume of data, and reporting requirements.",
-              "Schema Design: Build efficient data models (ER diagrams, normalization, indexing strategy).",
-              "Technology Choice: Suggest the right RDBMS (MySQL for cost efficiency, PostgreSQL for open-source robustness, Oracle/DB2/SQL Server for enterprise-grade needs).",
-              "Development: Create procedures, triggers, views and queries tailored for their use cases.",
-              "Testing: Test with sample data and optimize queries for performance."
-            ]
-          }
+            items: ["Database Design & Development"]
+          },
+          {
+            type: "paragraph",
+            text: "We design reliable, high-performance databases that keep your operations smooth and your data organized whether it's SQL, NoSQL, or cloud-based systems."
+          },
+          {
+            type: 'list',
+            items: ["Data Integration & ETL Pipelines"]
+          },
+          {
+            type: "paragraph",
+            text: "We build automated data pipelines using tools like Python, Apache Spark, and Airflow to move, clean, and transform data seamlessly across platforms."
+          },
+          {
+            type: 'list',
+            items: ["Data Warehousing"]
+          },
+          {
+            type: "paragraph",
+            text: "Consolidate your data in modern, scalable warehouses like Snowflake, BigQuery, or Amazon Redshift making it easy to analyse and visualize in real time."
+          },
+          {
+            type: 'list',
+            items: ["Data Migration & Optimization"]
+          },
+          {
+            type: "paragraph",
+            text: "We help you move from legacy databases to modern systems securely and with zero data loss while optimizing performance and storage efficiency."
+          },
+          {
+            type: 'list',
+            items: ["Data Quality & Governance"]
+          },
+          {
+            type: "paragraph",
+            text: "Reliable data drives reliable insights. We establish governance, validation, and auditing processes to ensure your data is accurate, compliant, and trustworthy."
+          },
+          {
+            type: 'list',
+            items: ["Analytics Enablement"]
+          },
+          {
+            type: "paragraph",
+            text: "Our engineering team partners with your BI tools, Power BI, Tableau, or custom dashboards to make data accessible, insightful, and ready for decision-making."
+          },
         ],
       },
       {
-        heading: "Database Administration, Monitoring, and Optimization",
+        heading: "Why Choose ByteBuzz?",
         content: [
           {
             type: 'list',
             items: [
-              "Set up monitoring tools (e.g., Nagios, Zabbix, Prometheus, native DB tools).",
-              "Configure performance tuning (query optimization, indexing, caching).",
-              "Implement user management, role-based access, and security hardening.",
-              "Routine health checks, patch updates, and log monitoring."
-            ]
-          }
-
-        ],
-      },
-      {
-        heading: "Data Backup & Recovery Solutions",
-        content: [
-          {
-            type: 'list',
-            items: [
-              "Design a backup strategy (full, incremental, differential).",
-              "Automate backups (cron jobs, DB-native schedulers, or enterprise backup tools).",
-              "Store backups securely (on-premises + cloud, encrypted).",
-              "Test disaster recovery (RTO – Recovery Time Objective, RPO – Recovery Point Objective)."
-            ]
-          }
-
-        ],
-      },
-      {
-        heading: "Data Migration & Integration",
-        content: [
-          {
-            type: 'list',
-            items: [
-              "Assess source and target systems.",
-              "Plan migration (schema mapping, data cleansing, compatibility checks).",
-              "Use ETL/ELT tools (Pentaho, Talend, Informatica, custom scripts).",
-              "Run test migrations before full migration.",
-              "Ensure zero/minimal downtime cutover."
+              "End-to-End Data Expertise - From source to storage to visualization.",
+              "Future-Ready Architecture - Scalable, secure, and cloud-native solutions.",
+              "Automation-Driven Approach - We cut manual work through smart data workflows.",
+              "Faster Insights, Better Decisions - Turning raw data into real business impact."
             ]
           }
 
@@ -199,8 +208,9 @@ export const servicesData: Service[] = [
   {
     slug: "software-development-service",
     image: "/web-dev.jpg",
-    title: "Software Development",
-    description: "Faster time-to-market with agile methodology, Secure, scalable, and future-proof solutions, Tailored ERP/CRM systems to boost productivity, SaaS offerings for cost efficiency & business growth, Data-driven decision-making with integrated analytics, Web Application Development, Custom ERP/CRM Solutions for Small Businesses, SaaS (Software as a Service.",
+    title: "Software Development Services",
+    subhead: "Let Us Build What's Next",
+    description: "At ByteBuzz, we blend technology, creativity, and strategy to craft software that delivers real impact. Whether you're a startup shaping your first product or an enterprise scaling new solutions, we are here to turn your vision into reality with innovation that lasts.",
     highlights: [
       { icon: "/logos/nextjs.svg", label: "NextJS" },
       { icon: "/logos/react.svg", label: "ReactJS" },
@@ -222,145 +232,81 @@ export const servicesData: Service[] = [
     ],
     sections: [
       {
-        heading: "Web Application Development",
+        heading: "What We Do",
         content: [
           {
-            type: 'paragraph',
-            text: "Front-end (User Interface)"
+            type: 'list',
+            items: ["Custom Software Development"]
+          },
+          {
+            type: "paragraph",
+            text: "We create tailored solutions that fit your unique needs not one-size-fits-all templates. Our team designs and develops software that helps your business work smarter, faster, and better."
           },
           {
             type: 'list',
-            items: [
-              "Technologies: React.js, Angular, Vue.js.",
-              "Responsive design (mobile-first).",
-              "UI/UX design principles.",
-              "Accessibility compliance (WCAG).",
-            ]
+            items: ["Web & Mobile App Development"]
           },
           {
-            type: 'paragraph',
-            text: "Back-end (Server-Side)"
+            type: "paragraph",
+            text: "Modern, responsive, and intuitive applications built with the latest frameworks and technologies like React, Next.js, Node.js, and Python to deliver seamless performance across all devices."
           },
           {
             type: 'list',
-            items: [
-              "Technologies: Node.js, Python (Django/Flask), Java (Spring Boot), PHP (Laravel), Go, Rails (RoR).",
-              "RESTful / GraphQL APIs.",
-              "Authentication & Authorization (OAuth2, JWT, SSO).",
-              "Database integration (MySQL, PostgreSQL, MongoDB, DB2, SQL Server).",
-            ]
+            items: ["API Development & Integration"]
           },
           {
-            type: 'paragraph',
-            text: "Implementation Approach"
+            type: "paragraph",
+            text: "We connect your systems, apps, and tools through secure APIs enabling automation, faster data flow, and improved collaboration across platforms."
           },
           {
             type: 'list',
-            items: [
-              "Requirement gathering & wireframing.",
-              "Agile/Scrum development process.",
-              "Automated testing & QA.",
-              "CI/CD pipeline for deployment.",
-              "Hosting (Cloud: AWS, Azure, GCP / On-premises).",
-            ]
+            items: ["Enterprise Software Solutions"]
+          },
+          {
+            type: "paragraph",
+            text: "From CRM and ERP systems to workflow automation platforms, we build enterprise-grade solutions that simplify complexity and boost productivity."
+          },
+          {
+            type: 'list',
+            items: ["MVP Development for Startups"]
+          },
+          {
+            type: "paragraph",
+            text: "Got an idea? We will help you bring it to life fast. We specialize in building Minimum Viable Products (MVPs) that get you to market quickly and help validate your concept before scaling."
+          },
+          {
+            type: 'list',
+            items: ["Maintenance & Upgrades"]
+          },
+          {
+            type: "paragraph",
+            text: "We do not just build we evolve your software. Our ongoing maintenance ensures your systems remain secure, updated, and ready for the future."
           },
         ],
       },
       {
-        heading: "Custom ERP/CRM Solutions",
+        heading: "Why Choose ByteBuzz?",
         content: [
           {
-            type: 'paragraph',
-            text: "ERP Modules"
-          },
-          {
             type: 'list',
             items: [
-              "Inventory & Supply Chain.",
-              "HR & Payroll.",
-              "Finance & Accounting.",
-              "Sales & Purchase.",
-              "Reporting & Analytics.",
+              "Agile & Transparent Development - Regular updates, fast delivery, and zero surprises.",
+              "Full-Stack Expertise - Frontend to backend, cloud to database we handle it all.",
+              "User-Centric Design - Clean, intuitive interfaces focused on real user needs.",
+              "Scalable Architecture - Built to grow with your business, not outgrow it."
             ]
-          },
-          {
-            type: 'paragraph',
-            text: "CRM Modules"
-          },
-          {
-            type: 'list',
-            items: [
-              "Lead & Contact management.",
-              "Customer support/ticketing system.",
-              "Sales pipeline tracking.",
-              "Marketing automation (email/SMS campaigns).",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Implementation Approach"
-          },
-          {
-            type: 'list',
-            items: [
-              "Analyze business workflows & pain points.",
-              "Customization based on client needs.",
-              "Integration with existing systems (e.g., accounting, e-commerce).",
-              "Role-based dashboards.",
-              "Data migration & training support.",
-            ]
-          },
-        ],
-      },
-      {
-        heading: "SaaS (Software as a Service)",
-        content: [
-          {
-            type: 'paragraph',
-            text: "Core Features"
-          },
-          {
-            type: 'list',
-            items: [
-              "Multi-tenancy architecture.",
-              "Subscription management & billing.",
-              "Role-based access control.",
-              "Scalability & performance optimization.",
-              "Security (data encryption, compliance: GDPR, HIPAA if required).",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Implementation Approach"
-          },
-          {
-            type: 'list',
-            items: [
-              "Choose cloud-native architecture (AWS/Azure/GCP).",
-              "Containerization (Docker, Kubernetes).",
-              "CI/CD & automated scaling.",
-              "Monitoring & support (logging, alerts, analytics).",
-              "Regular updates with zero downtime deployment.",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Technology Stack (Suggested)"
-          },
-          {
-            type: 'paragraph',
-            text: " React.js / Angular,  Node.js / Python / Java / Go lang / Ruby on Rails,  PostgreSQL, MySQL, MongoDB, AWS, Azure, GCP, Docker, Kubernetes, Jenkins, GitHub Actions,  SSL/TLS, OAuth2, IAM, Pen-testing"
-          },
-        ],
-      },
+          }
 
+        ],
+      },
     ]
   },
   {
     slug: "data-engineering-service",
     image: "/data-engineering.jpg",
-    title: "Data Engineering",
-    description: ".Design, build, and maintain data pipelines, Ensure raw data is ingested, cleaned, transformed, stored, and delivered as actionable information, Source-to-target mapping document, Data pipeline code (with documentation), Data model diagrams, Data quality and monitoring reports, Handover and support guide.",
+    title: "Data Science & AI Services",
+    subhead: "Smarter Businesses Start Here",
+    description: "At ByteBuzz, we make AI simple, accessible, and practical helping you unlock the full potential of your data. From predictive analytics to intelligent automation, we build AI-driven systems that empower smarter decisions and move your business forward with confidence.",
     highlights: [
       { icon: "/logos/spark.svg", label: "Spark" },
       { icon: "/logos/apache.svg", label: "Apache" },
@@ -373,98 +319,71 @@ export const servicesData: Service[] = [
     ],
     sections: [
       {
-        heading: "Key Phases & Deliverables",
+        heading: "What We Do",
         content: [
           {
-            type: 'paragraph',
-            text: "Requirements Gathering"
+            type: 'list',
+            items: ["Predictive Analytics & Forecasting"]
+          },
+          {
+            type: "paragraph",
+            text: "We use data to help you look ahead spotting trends, anticipating demand, and making informed decisions that drive business growth."
           },
           {
             type: 'list',
-            items: [
-              "Identify stakeholders and data consumers.",
-              "Gather analytics, reporting, and data product needs",
-              "Define KPIs and project success metrics.",
-            ]
+            items: ["Machine Learning Solutions"]
           },
           {
-            type: 'paragraph',
-            text: "Data Source Assessment"
+            type: "paragraph",
+            text: "Our experts build and deploy custom ML models that learn from your data also improving accuracy, automating processes, and uncovering hidden opportunities."
           },
           {
             type: 'list',
-            items: [
-              "Audit and document existing data sources (databases, APIs, files, etc.).",
-              "Assess data quality, availability, and required integrations.",
-            ]
+            items: ["Data Visualization & Insights"]
           },
           {
-            type: 'paragraph',
-            text: "Data Pipeline Design"
+            type: "paragraph",
+            text: "Transform complex datasets into clear, actionable dashboards. We turn your numbers into stories that help you make decisions confidently."
           },
           {
             type: 'list',
-            items: [
-              "Architect ETL/ELT pipelines (batch and/or streaming).",
-              "Choose technology stack (e.g. Spark, Airflow, Kafka, cloud services).",
-            ]
+            items: ["AI-Powered Automation"]
           },
           {
-            type: 'paragraph',
-            text: "Data Modelling & Schema Design"
+            type: "paragraph",
+            text: "We streamline operations with intelligent automation from chatbots and process automation to intelligent data routing and anomaly detection."
           },
           {
             type: 'list',
-            items: [
-              "Model data for analytics or operational use (star/snowflake schema, data marts, Lakehouse frameworks).",
-              "Enforce data types, integrity, and lineage.",
-            ]
+            items: ["Natural Language Processing (NLP)"]
           },
           {
-            type: 'paragraph',
-            text: "Development & Implementation"
+            type: "paragraph",
+            text: "We enable smarter communication tools, text analytics, and sentiment analysis to help businesses understand and interact better with their customers."
           },
           {
             type: 'list',
-            items: [
-              "Build pipelines for ingestion, transformation, and loading.",
-              "Implement automation and monitoring.",
-            ]
+            items: ["AI Strategy & Implementation"]
           },
           {
-            type: 'paragraph',
-            text: "Testing & Validation"
+            type: "paragraph",
+            text: "Whether you are starting your AI journey or scaling an existing model, we help you design and implement the right AI roadmap and aligned with your business goals."
           },
-          {
-            type: 'list',
-            items: [
-              "Data quality checks (completeness, accuracy, consistency).",
-              "Pipeline unit/integration testing.",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Deployment & Handover"
-          },
+        ],
+      },
+      {
+        heading: "Why Choose ByteBuzz?",
+        content: [
           {
             type: 'list',
             items: [
-              "Operationalize workflows (scheduling, monitoring, alerting).",
-              "Provide documentation and knowledge transfer.",
-              "Support UAT (User Acceptance Testing).",
+              "Real-World Impact - AI solutions built to solve actual business problems, not just experiments.",
+              "End-to-End Expertise - From data collection to deployment and monitoring.",
+              "Explainable AI - Transparent models you can trust and understand.",
+              "Scalable AI Systems - Solutions that evolve as your data and needs grow."
             ]
-          },
-          {
-            type: 'paragraph',
-            text: "Governance & Compliance"
-          },
-          {
-            type: 'list',
-            items: [
-              "Implement data security, access controls, and audit trails.",
-              "Document data policies and privacy compliance.",
-            ]
-          },
+          }
+
         ],
       },
     ]
@@ -473,7 +392,8 @@ export const servicesData: Service[] = [
     slug: "cloud-devops-service",
     image: "/devops.jpg",
     title: "Cloud & DevOps Services",
-    description: "Lower IT costs & optimized resource usage, Faster deployment & scalability of applications, Increased security & compliance, Future-proof IT with hybrid/multi-cloud flexibility, Assessment → Design → Migration → Optimization → Cost Control → Multi/Hybrid Cloud Strategy → Business Growth",
+    subhead: "Build. Deploy. Scale — Smarter.",
+    description: "At ByteBuzz, we unite the power of Cloud and DevOps to help you move faster, operate smarter, and innovate without limits. From seamless deployments to automated workflows and scalable infrastructure, we help your business save time, cut costs, and deliver with confidence.",
     highlights: [
       { icon: "/logos/aws.svg", label: "Amazon Web Services" },
       { icon: "/logos/azure.svg", label: "Azure" },
@@ -485,163 +405,151 @@ export const servicesData: Service[] = [
     ],
     sections: [
       {
-        heading: "Cloud Infrastructure Setup & Optimization",
+        heading: "What We Do",
         content: [
           {
-            type: 'paragraph',
-            text: "Assessment & Planning"
+            type: 'list',
+            items: ["Cloud Strategy & Migration"]
+          },
+          {
+            type: "paragraph",
+            text: "Move to the cloud with confidence. We plan and execute seamless migrations to AWS, Azure, or Google Cloud ensuring minimal downtime, maximum performance, and full data security."
           },
           {
             type: 'list',
-            items: [
-              "Analyze current IT landscape.",
-              "Define workload requirements.",
-              "Select appropriate cloud provider(s) (AWS, Azure, GCP).",
-            ]
+            items: ["Cloud Architecture & Optimization"]
           },
           {
-            type: 'paragraph',
-            text: "Setup & Migration"
+            type: "paragraph",
+            text: "We design scalable cloud environments tailored to your needs focusing on cost efficiency, reliability, and flexibility."
           },
           {
             type: 'list',
-            items: [
-              "Provision virtual machines, storage, and networking.",
-              "Migrate applications & databases to the cloud.",
-              "Ensure security configurations (IAM, encryption, firewalls).",
-            ]
+            items: ["DevOps Implementation"]
           },
           {
-            type: 'paragraph',
-            text: "Optimization"
+            type: "paragraph",
+            text: "From CI/CD pipelines to automated deployments, we bring agility to your development cycle. Faster releases, fewer errors, and smoother collaboration between your dev and ops teams."
           },
           {
             type: 'list',
-            items: [
-              "Implement autoscaling for demand fluctuations.",
-              "Use load balancing for performance and availability.",
-              "Monitor system health with cloud-native tools (CloudWatch, Azure Monitor, etc.).",
-            ]
+            items: ["Infrastructure as Code (IaC)"]
+          },
+          {
+            type: "paragraph",
+            text: "We use tools like Terraform, Ansible, and CloudFormation to automate infrastructure setup and management, making your deployments repeatable, consistent, and scalable."
+          },
+          {
+            type: 'list',
+            items: ["Continuous Monitoring & Support"]
+          },
+          {
+            type: "paragraph",
+            text: "We do not just set up and leave, we continuously monitor performance, logs, and uptime to ensure your systems stay optimized 24/7."
+          },
+          {
+            type: 'list',
+            items: ["Security & Compliance"]
+          },
+          {
+            type: "paragraph",
+            text: "Built-in cloud security and compliance frameworks help protect your data and meet industry standards without slowing you down."
           },
         ],
       },
       {
-        heading: "Cloud Cost Management",
+        heading: "Why Choose ByteBuzz?",
         content: [
           {
-            type: 'paragraph',
-            text: "Monitoring & Reporting"
-          },
-          {
             type: 'list',
             items: [
-              "Enable cost dashboards (AWS Cost Explorer, Azure Cost Management).",
-              "Track per-service and per-department usage.",
+              "Agile Delivery. Faster releases, better collaboration, and zero downtime.",
+              "Certified Cloud Experts. Skilled across AWS, Azure, and GCP.",
+              "Automation-First Approach. We eliminate manual errors with smart automation.",
+              "Scalable by Design. Systems that grow seamlessly with your business."
             ]
-          },
-          {
-            type: 'paragraph',
-            text: "Optimization Techniques"
-          },
-          {
-            type: 'list',
-            items: [
-              "Rightsize instances (avoid overprovisioning).",
-              "Use reserved instances and spot instances.",
-              "Implement storage lifecycle policies.",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Governance"
-          },
-          {
-            type: 'list',
-            items: [
-              "Define budget alerts and spending limits.",
-              "Enforce tagging for cost allocation.",
-              "Apply FinOps (Financial Operations) practices.",
-            ]
-          },
-        ],
-      },
-      {
-        heading: "Hybrid and Multi-Cloud Strategy",
-        content: [
-          {
-            type: 'paragraph',
-            text: "Hybrid Cloud Implementation"
-          },
-          {
-            type: 'list',
-            items: [
-              "Integrate on-premises infrastructure with cloud services.",
-              "Use secure VPN/Direct Connect/ExpressRoute for connectivity.",
-              "Deploy applications across on-prem and cloud for flexibility.",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Multi-Cloud Strategy"
-          },
-          {
-            type: 'list',
-            items: [
-              "Select best-of-breed services from different providers.",
-              "Prevent vendor lock-in.",
-              "Implement cloud management platforms (CMPs) for unified visibility.",
-            ]
-          },
-          {
-            type: 'paragraph',
-            text: "Security & Compliance"
-          },
-          {
-            type: 'list',
-            items: [
-              "Consistent security policies across environments.",
-              "Data portability & backup strategies.",
-              "Ensure compliance with regulations (GDPR, HIPAA, ISO).",
-            ]
-          },
-        ],
-      },
+          }
 
+        ],
+      },
     ]
   },
   {
     slug: "cybersecurity-service",
     image: "/cybersecurity.jpg",
     title: "CyberSecurity Services",
-    description: "Sit in quis ullamco nulla magna amet adipisicing irure magna velit Lorem nulla adipisicing elit. Enim proident eu officia nisi mollit Lorem nostrud proident consequat ad officia consequat consequat. Nulla pariatur officia anim adipisicing voluptate quis. Voluptate veniam ut irure aliqua enim exercitation laborum ullamco aute nulla.",
+    subhead: "Let Us Build a Safer, Stronger, and More Resilient Digital Future.",
+    description: "At ByteBuzz, cybersecurity is not just about protection, it is about confidence. We safeguard your business with proactive security measures that let you focus on what you do best, while we handle the threats.",
     highlights: [
       { icon: "/logos/auth0.svg", label: "Auth0" },
     ],
     sections: [
       {
-        heading: "Security solutions",
+        heading: "What We Do",
         content: [
           {
             type: 'list',
-            items: [
-              "Firewall & endpoint protection.",
-              "Network vulnerability assessment.",
-              "Data encryption and secure access control.",
-              "SOC (Security Operations Center) as a service.",
-            ]
+            items: ["Network Protection"]
+          },
+          {
+            type: "paragraph",
+            text: "We keep your infrastructure secure with 24/7 monitoring, firewall management, and real-time threat detection, so you never have to worry about what is happening behind the scenes."
+          },
+          {
+            type: 'list',
+            items: ["Endpoint & Device Security"]
+          },
+          {
+            type: "paragraph",
+            text: "Every laptop, desktop, and mobile device is a potential entry point. We lock them down with strong endpoint protection, monitoring, and quick response solutions."
+          },
+          {
+            type: 'list',
+            items: ["Cloud Security"]
+          },
+          {
+            type: "paragraph",
+            text: "Whether you are on AWS, Azure, or Google Cloud, we make sure your cloud setup stays compliant, encrypted, and hacker-proof."
+          },
+          {
+            type: 'list',
+            items: ["Vulnerability Testing"]
+          },
+          {
+            type: "paragraph",
+            text: "We find the weak spots before attackers do. Our team performs deep vulnerability assessments and penetration testing to strengthen your digital walls."
+          },
+          {
+            type: 'list',
+            items: ["Data Backup & Protection"]
+          },
+          {
+            type: "paragraph",
+            text: "We secure your critical data with end-to-end encryption, automated backups, and fast recovery options because prevention is good, but recovery is better."
+          },
+          {
+            type: 'list',
+            items: ["Incident Response"]
+          },
+          {
+            type: "paragraph",
+            text: "If something goes wrong, we move fast. Our experts identify, contain, and resolve threats while helping you get back online quickly and safely."
           },
         ],
       },
       {
-        heading: "Compliance",
+        heading: "Why Choose ByteBuzz?",
         content: [
           {
             type: 'list',
             items: [
-              "GDPR, HIPAA, ISO compliance support.",
-              "Security audits & penetration testing.",
+              "We are proactive, not reactive. We spot issues before they become attacks.",
+              "We simplify security. No jargon but just clear strategies and real protection.",
+              "We grow with you. Our solutions scale as your business expands.",
+              "We have got your back. Always on, always secure, always BuzzByte."
             ]
-          },
+          }
+
         ],
       },
     ]
@@ -649,22 +557,77 @@ export const servicesData: Service[] = [
   {
     slug: "it-setup-support-service",
     image: "/it-support.jpg",
-    title: "IT Infrastructure Setup & Support",
-    description: "Sit in quis ullamco nulla magna amet adipisicing irure magna velit Lorem nulla adipisicing elit. Enim proident eu officia nisi mollit Lorem nostrud proident consequat ad officia consequat consequat. Nulla pariatur officia anim adipisicing voluptate quis. Voluptate veniam ut irure aliqua enim exercitation laborum ullamco aute nulla.",
+    title: "IT Infrastructure Setup & Support Services",
+    subhead: "Focus on Growth, We will Handle the Tech",
+    description: "At ByteBuzz, we ensure your IT infrastructure does not just run but it thrives. From initial setup and system design to daily monitoring and support, we take care of your entire tech backbone.",
     highlights: [],
     sections: [
       {
-        heading: "IT Infrastructure Setup & Support",
+        heading: "What We Do",
+        content: [
+          {
+            type: 'list',
+            items: ["Infrastructure Setup"]
+          },
+          {
+            type: "paragraph",
+            text: "We help you build your IT foundation the right way from server installations and cloud environments to storage and networking solutions. Whether you are starting fresh or upgrading, we make the setup simple, scalable, and future-ready."
+          },
+          {
+            type: 'list',
+            items: ["System & Network Management"]
+          },
+          {
+            type: "paragraph",
+            text: "Our team keeps your systems running at peak performance. We monitor uptime, manage configurations, and ensure your network stays fast, secure, and connected."
+          },
+          {
+            type: 'list',
+            items: ["Cloud & Hybrid Solutions"]
+          },
+          {
+            type: "paragraph",
+            text: "Move your business to the cloud with confidence. We help design the perfect mix of on-prem and cloud infrastructure optimizing cost, performance, and flexibility across AWS, Azure, or Google Cloud."
+          },
+          {
+            type: 'list',
+            items: ["Backup & Disaster Recovery"]
+          },
+          {
+            type: "paragraph",
+            text: "We build smart backup systems and disaster recovery plans so your data is always safe and your business can bounce back from any disruption, fast."
+          },
+          {
+            type: 'list',
+            items: ["IT Support & Maintenance"]
+          },
+          {
+            type: "paragraph",
+            text: "From troubleshooting to upgrades, our support team ensures smooth day-to-day operations. We are just a call away to fix issues before they impact your workflow."
+          },
+          {
+            type: 'list',
+            items: ["Security Integration"]
+          },
+          {
+            type: "paragraph",
+            text: "We embed cybersecurity practices into your infrastructure also ensuring every layer, connection, and endpoint is protected from potential threats."
+          },
+        ],
+      },
+      {
+        heading: "Why Choose ByteBuzz?",
         content: [
           {
             type: 'list',
             items: [
-              " Network setup (LAN, WAN, Wi-Fi, VPN).",
-              "Server installation and configuration.",
-              "Cloud migration and management (AWS, Azure, GCP).",
-              " IT helpdesk and technical support.",
+              "End-to-End Expertise - Setup, monitoring, and ongoing support under one roof.",
+              "Flexible & Scalable - We build systems that grow with your business.",
+              "Faster Response - Quick support when you need it most.",
+              "Cost-Efficient - Smart designs that save time, money, and resources."
             ]
-          },
+          }
+
         ],
       },
     ]

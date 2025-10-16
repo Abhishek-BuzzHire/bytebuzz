@@ -47,7 +47,7 @@ const ServiceSection = React.forwardRef<HTMLDivElement>((_props, ref) => {
                           </h3>
                         </div>
                         <div className="details-container space-y-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full">
-                          <div className="space-y-2">
+                          <div className="space-y-2 ">
                             {service.items.map((item, itemIndex) => (
                               <div key={itemIndex} className="flex items-center gap-2">
                                 <span className="text-lg font-medium text-white">{item}</span>
@@ -55,10 +55,9 @@ const ServiceSection = React.forwardRef<HTMLDivElement>((_props, ref) => {
                             ))}
                           </div>
 
-                          <p className="text-md leading-relaxed text-gray-200">
+                          <p className="text-md leading-relaxed text-gray-200 max-h-40 overflow-auto">
                             {service.description}
                           </p>
-
                         </div>
                       </div>
                     </div>
